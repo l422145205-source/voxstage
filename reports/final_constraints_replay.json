@@ -1,0 +1,193 @@
+{
+  "description": "Re-evaluated original real predictions after contract hardening; no new model inference",
+  "director_sha256": "48e15b66b542ed301b9f0d711c731ed39b5d5262f89b543f831237f54a410ba9",
+  "records": [
+    {
+      "case": "dev01",
+      "run_id": "dev01-cae4a8654bff75f1",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev02",
+      "run_id": "dev02-932472801a644719",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev03",
+      "run_id": "dev03-bfb6aa4d750827b4",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev04",
+      "run_id": "dev04-1718e5fb6704fa69",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev05",
+      "run_id": "dev05-7456dbe489a06706",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev06",
+      "run_id": "dev06-507f3e426066b290",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev07",
+      "run_id": "dev07-a63d872058f7217e",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "dev08",
+      "run_id": "dev08-9cf3db96b75fc7e5",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test01",
+      "run_id": "test01-3b9d3f686c5f62fe",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test02",
+      "run_id": "test02-9cb6a45b7a7d31b9",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test03",
+      "run_id": "test03-50a8330756ae1c97",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test04",
+      "run_id": "test04-ab35c201063a6b39",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test05",
+      "run_id": "test05-10c01a4c2a795c23",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test06",
+      "run_id": "test06-c679c4539ce7f910",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    },
+    {
+      "case": "test07",
+      "run_id": "test07-059ec839ba0c4875",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 2,
+        "asr_cache_hits": 3
+      }
+    },
+    {
+      "case": "test08",
+      "run_id": "test08-d3e8c51d4a5ea017",
+      "status": "complete",
+      "stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 1,
+        "asr_cache_hits": 2
+      }
+    }
+  ],
+  "stress": {
+    "status": "needs_review",
+    "stats": {
+      "tts_calls": 0,
+      "asr_calls": 0,
+      "tts_cache_hits": 2,
+      "asr_cache_hits": 2
+    },
+    "source_probe": "test07",
+    "purpose": "Deliberately impossible deadline using two existing real takes; not a new quality sample"
+  }
+}

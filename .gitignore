@@ -1,0 +1,11 @@
+runtime/
+data/
+dist/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+*.log
+*.partial*

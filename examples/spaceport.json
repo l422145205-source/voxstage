@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "id": "spaceport",
+  "title": "星港撤离 · 双角色对白",
+  "cast": [
+    {"id":"pilot","name":"领航员","speaker":"Vivian"},
+    {"id":"commander","name":"指挥官","speaker":"Uncle_Fu"}
+  ],
+  "cues": [
+    {"id":"s01","character":"pilot","text":"指挥官，飞船已经准备好了。","language":"Chinese","start":0,"end":4.5,"tone":"urgent"},
+    {"id":"s02","character":"commander","text":"先确认所有人都已登船。","language":"Chinese","start":4.8,"end":9.3,"tone":"neutral"},
+    {"id":"s03","character":"pilot","text":"最后一名乘客已经进入舱门。","language":"Chinese","start":9.6,"end":14.6,"tone":"happy"},
+    {"id":"s04","character":"commander","text":"很好，准备出发。","language":"Chinese","start":14.9,"end":18.9,"tone":"gentle"}
+  ],
+  "policy":{"max_attempts":2,"max_cer":0.15,"max_speedup":1.15,"max_clipped_fraction":0.001,"min_rms_dbfs":-48},
+  "seed":2026
+}

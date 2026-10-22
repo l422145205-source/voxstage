@@ -1,0 +1,20 @@
+{
+  "browser": "in-app browser",
+  "workflow": "Edited first cue via UI and submitted real local-model job",
+  "run_id": "spaceport-6d3c43999bf70a8e",
+  "status": "complete",
+  "stats": {
+    "tts_calls": 1,
+    "asr_calls": 1,
+    "tts_cache_hits": 3,
+    "asr_cache_hits": 7
+  },
+  "media_element": {
+    "readyState": 4,
+    "duration_seconds": 18.9,
+    "error": null
+  },
+  "screenshot": "Browser capture unavailable; no fabricated screenshot supplied",
+  "sample_text": "指挥官，乘客已经全部登船。",
+  "subjective_listening_evaluation": false
+}

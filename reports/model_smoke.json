@@ -1,0 +1,31 @@
+{
+  "synthesis": {
+    "path": "${PROJECT_ROOT}\\data\\smoke\\hello.wav",
+    "sample_rate": 24000,
+    "elapsed_seconds": 5.384342299999844,
+    "gpu_allocated_bytes": 4188146688
+  },
+  "recognition": {
+    "text": "指挥官，飞船已经准备好了。",
+    "language": "Chinese",
+    "reference_supplied": false,
+    "elapsed_seconds": 8.588763499999914,
+    "gpu_allocated_bytes": 1580769792
+  },
+  "workers": {
+    "tts": {
+      "version": 1,
+      "event": "ready",
+      "kind": "tts",
+      "load_seconds": 13.418140899997525,
+      "transformers": "4.57.3"
+    },
+    "asr": {
+      "version": 1,
+      "event": "ready",
+      "kind": "asr",
+      "load_seconds": 10.345013000001927,
+      "transformers": "4.57.6"
+    }
+  }
+}

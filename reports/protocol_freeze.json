@@ -1,0 +1,13 @@
+{
+  "dataset_sha256": "407cc4c3814c3f879e9da84ad1b5c3fe0d50e81db648908ca0c31de5fc69c270",
+  "director_sha256": "25b7a11e2c6bf58e2c590cc01a5e1ca7c2db7ebf4d81c5cfb0e746185b042c33",
+  "frozen_at_utc": "2026-10-22T04:38:57.838542+00:00",
+  "policy": {
+    "max_attempts": 2,
+    "max_cer": 0.15,
+    "max_speedup": 1.15,
+    "max_clipped_fraction": 0.001,
+    "min_rms_dbfs": -48
+  },
+  "split": "space and forest for development; island and clockwork for holdout; no human listening labels"
+}

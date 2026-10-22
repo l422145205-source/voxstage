@@ -1,0 +1,3899 @@
+{
+  "protocol": {
+    "dataset_sha256": "407cc4c3814c3f879e9da84ad1b5c3fe0d50e81db648908ca0c31de5fc69c270",
+    "director_sha256": "25b7a11e2c6bf58e2c590cc01a5e1ca7c2db7ebf4d81c5cfb0e746185b042c33",
+    "frozen_at_utc": "2026-10-22T04:38:57.838542+00:00",
+    "policy": {
+      "max_attempts": 2,
+      "max_cer": 0.15,
+      "max_speedup": 1.15,
+      "max_clipped_fraction": 0.001,
+      "min_rms_dbfs": -48
+    },
+    "split": "space and forest for development; island and clockwork for holdout; no human listening labels"
+  },
+  "backend_identity": {
+    "backend": "qwen3-local",
+    "models": {
+      "tts": {
+        "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+        "source": "modelscope"
+      },
+      "asr": {
+        "repo": "Qwen/Qwen3-ASR-0.6B",
+        "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+        "source": "modelscope"
+      }
+    },
+    "tts_package": "0.1.1",
+    "asr_package": "0.0.6",
+    "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 1200
+    }
+  },
+  "worker_info": {
+    "tts": {
+      "version": 1,
+      "event": "ready",
+      "kind": "tts",
+      "load_seconds": 14.567726400000538,
+      "transformers": "4.57.3"
+    },
+    "asr": {
+      "version": 1,
+      "event": "ready",
+      "kind": "asr",
+      "load_seconds": 10.285510200003046,
+      "transformers": "4.57.6"
+    }
+  },
+  "summary": {
+    "development": {
+      "n": 8,
+      "one_shot_no_timing_fit_passed": 6,
+      "one_shot_with_bounded_fit_passed": 8,
+      "bounded_repair_passed": 8,
+      "mean_first_take_asr_cer": 0.0,
+      "tts_calls": 8,
+      "asr_calls": 10
+    },
+    "holdout": {
+      "n": 8,
+      "one_shot_no_timing_fit_passed": 6,
+      "one_shot_with_bounded_fit_passed": 7,
+      "bounded_repair_passed": 8,
+      "mean_first_take_asr_cer": 0.004310344827586207,
+      "tts_calls": 9,
+      "asr_calls": 10
+    }
+  },
+  "records": [
+    {
+      "case": {
+        "id": "dev01",
+        "split": "development",
+        "group": "space",
+        "text": "指挥官，请关闭左侧的舱门。",
+        "language": "Chinese",
+        "speaker": "Vivian",
+        "tone": "urgent",
+        "capacity": 4.0
+      },
+      "result": {
+        "scene_id": "dev01",
+        "run_id": "dev01-637ad63f7d8cbcbf",
+        "request_fingerprint": "637ad63f7d8cbcbf94f91ede0f40849f89fb42539aedf2d731d6f70bff38685e",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 32.55096979999871,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "1df2057ec2caf04e83857f81ccdfce089ee14682190ee83c0aee436744d006db",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 51840,
+              "duration": 2.16,
+              "rms_dbfs": -17.761218081194208,
+              "sample_peak": 0.80078125,
+              "oversampled_peak": 0.8116037249565125,
+              "clipped_fraction": 0.0,
+              "sha256": "ce0599838f95a3fab44f9902c14b3b7ff7f8498127d0fc50e62372e4f6df0336"
+            },
+            "asr": {
+              "text": "指挥官，请关闭左侧的舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 2.6819212999980664,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a504d04192c774504be6f6eaeb18f86b122c95e89f2d8b1933f7e19e1eef477a"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官请关闭左侧的舱门",
+              "normalized_hypothesis": "指挥官请关闭左侧的舱门"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "指挥官，请关闭左侧的舱门。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 4383328
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "ce0599838f95a3fab44f9902c14b3b7ff7f8498127d0fc50e62372e4f6df0336"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 51840,
+              "duration": 2.16,
+              "rms_dbfs": -17.761218081194208,
+              "sample_peak": 0.80078125,
+              "oversampled_peak": 0.8116037249565125,
+              "clipped_fraction": 0.0,
+              "sha256": "ce0599838f95a3fab44f9902c14b3b7ff7f8498127d0fc50e62372e4f6df0336"
+            },
+            "final_asr": {
+              "text": "指挥官，请关闭左侧的舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 2.6819212999980664,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a504d04192c774504be6f6eaeb18f86b122c95e89f2d8b1933f7e19e1eef477a"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官请关闭左侧的舱门",
+              "normalized_hypothesis": "指挥官请关闭左侧的舱门"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\1df2057ec2caf04e83857f81ccdfce089ee14682190ee83c0aee436744d006db\\6d13d2492e5a5387fc06512b50d991569870c70e94330ce90e22167ebbe534e2.wav",
+            "sha256": "ce0599838f95a3fab44f9902c14b3b7ff7f8498127d0fc50e62372e4f6df0336",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev01",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 96000,
+            "duration": 4.0,
+            "rms_dbfs": -20.437280482964525,
+            "sample_peak": 0.80078125,
+            "oversampled_peak": 0.8116037249565125,
+            "clipped_fraction": 0.0,
+            "sha256": "7dfe05fab93798c7e01268d3a70a64769999d2bdddaa756157395d3629298f62"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.16,
+              "take_sha256": "ce0599838f95a3fab44f9902c14b3b7ff7f8498127d0fc50e62372e4f6df0336",
+              "text": "指挥官，请关闭左侧的舱门。",
+              "speech_text": "指挥官，请关闭左侧的舱门。",
+              "source_take_key": "1df2057ec2caf04e83857f81ccdfce089ee14682190ee83c0aee436744d006db"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev02",
+        "split": "development",
+        "group": "space",
+        "text": "不要启动引擎，燃料管还没有接好。",
+        "language": "Chinese",
+        "speaker": "Uncle_Fu",
+        "tone": "neutral",
+        "capacity": 5.0
+      },
+      "result": {
+        "scene_id": "dev02",
+        "run_id": "dev02-ae6de747f841d8c8",
+        "request_fingerprint": "ae6de747f841d8c8aee3696dbf9fb3024bc8e49875e5787d2f09c02eff99126a",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 6.248010000002978,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "b4eafdc4783d8cdb5a10486a00bbdea9000c6b4719a1d8a1c43b829ea6363058",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 90240,
+              "duration": 3.76,
+              "rms_dbfs": -24.543153804171705,
+              "sample_peak": 0.70703125,
+              "oversampled_peak": 0.714618980884552,
+              "clipped_fraction": 0.0,
+              "sha256": "8281ff38c6fac2d01fa7dfbb8c11255a587cde3fcf6fa54b257c7fcb5847702b"
+            },
+            "asr": {
+              "text": "不要启动引擎，燃料管还没有接好。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3517596000019694,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "1b2cab2f7430d3dbe11a7857496b3f775edbbe032b94040a1288622a55931c65"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 14,
+              "normalized_reference": "不要启动引擎燃料管还没有接好",
+              "normalized_hypothesis": "不要启动引擎燃料管还没有接好"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "不要启动引擎，燃料管还没有接好。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 4383329
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "8281ff38c6fac2d01fa7dfbb8c11255a587cde3fcf6fa54b257c7fcb5847702b"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 90240,
+              "duration": 3.76,
+              "rms_dbfs": -24.543153804171705,
+              "sample_peak": 0.70703125,
+              "oversampled_peak": 0.714618980884552,
+              "clipped_fraction": 0.0,
+              "sha256": "8281ff38c6fac2d01fa7dfbb8c11255a587cde3fcf6fa54b257c7fcb5847702b"
+            },
+            "final_asr": {
+              "text": "不要启动引擎，燃料管还没有接好。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3517596000019694,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "1b2cab2f7430d3dbe11a7857496b3f775edbbe032b94040a1288622a55931c65"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 14,
+              "normalized_reference": "不要启动引擎燃料管还没有接好",
+              "normalized_hypothesis": "不要启动引擎燃料管还没有接好"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\b4eafdc4783d8cdb5a10486a00bbdea9000c6b4719a1d8a1c43b829ea6363058\\32389352f4b01d00f1833823cd4c47e7be619f68f99e1f03ffaa59d6f94dbb42.wav",
+            "sha256": "8281ff38c6fac2d01fa7dfbb8c11255a587cde3fcf6fa54b257c7fcb5847702b",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev02",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 120000,
+            "duration": 5.0,
+            "rms_dbfs": -25.78097539825528,
+            "sample_peak": 0.70703125,
+            "oversampled_peak": 0.714618980884552,
+            "clipped_fraction": 0.0,
+            "sha256": "da3fb866c10812771895be9af73fd9387773b2e575410311aeea7e828d242c3d"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.76,
+              "take_sha256": "8281ff38c6fac2d01fa7dfbb8c11255a587cde3fcf6fa54b257c7fcb5847702b",
+              "text": "不要启动引擎，燃料管还没有接好。",
+              "speech_text": "不要启动引擎，燃料管还没有接好。",
+              "source_take_key": "b4eafdc4783d8cdb5a10486a00bbdea9000c6b4719a1d8a1c43b829ea6363058"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev03",
+        "split": "development",
+        "group": "space",
+        "text": "三号闸门将在十秒后开启。",
+        "language": "Chinese",
+        "speaker": "Dylan",
+        "tone": "happy",
+        "capacity": 2.5
+      },
+      "result": {
+        "scene_id": "dev03",
+        "run_id": "dev03-cb29f5da209a83d1",
+        "request_fingerprint": "cb29f5da209a83d10e5ac51769bdd0a83bff1ff2e5e1128e0ccc5fb9204608a9",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 3.8457422999999835,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "02afd0c25c46b228e6bba14109e7c4e0f64b11348fa0fbafb3d559b3cde37253",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 53760,
+              "duration": 2.24,
+              "rms_dbfs": -25.87527365469429,
+              "sample_peak": 0.365234375,
+              "oversampled_peak": 0.36747682094573975,
+              "clipped_fraction": 0.0,
+              "sha256": "b0d8f09a4756aa9441b236e54fc2771b58e5a08f0d3e72d7ce3923266c9d3269"
+            },
+            "asr": {
+              "text": "三号闸门将在十秒后开启。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3454803999993601,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "e4d6a779d2bd591c82fd421d2b01e805439d8419c77008800bba9d24e8b1e719"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "三号闸门将在十秒后开启",
+              "normalized_hypothesis": "三号闸门将在十秒后开启"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "三号闸门将在十秒后开启。",
+              "language": "Chinese",
+              "speaker": "Dylan",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+              "seed": 4383330
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "b0d8f09a4756aa9441b236e54fc2771b58e5a08f0d3e72d7ce3923266c9d3269"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 53760,
+              "duration": 2.24,
+              "rms_dbfs": -25.87527365469429,
+              "sample_peak": 0.365234375,
+              "oversampled_peak": 0.36747682094573975,
+              "clipped_fraction": 0.0,
+              "sha256": "b0d8f09a4756aa9441b236e54fc2771b58e5a08f0d3e72d7ce3923266c9d3269"
+            },
+            "final_asr": {
+              "text": "三号闸门将在十秒后开启。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3454803999993601,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "e4d6a779d2bd591c82fd421d2b01e805439d8419c77008800bba9d24e8b1e719"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "三号闸门将在十秒后开启",
+              "normalized_hypothesis": "三号闸门将在十秒后开启"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\02afd0c25c46b228e6bba14109e7c4e0f64b11348fa0fbafb3d559b3cde37253\\040fb99d8ec3a56b669911e3ab94fc07501a3980f613f722db0a6ca002853789.wav",
+            "sha256": "b0d8f09a4756aa9441b236e54fc2771b58e5a08f0d3e72d7ce3923266c9d3269",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev03",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 60000,
+            "duration": 2.5,
+            "rms_dbfs": -26.35219355807304,
+            "sample_peak": 0.365234375,
+            "oversampled_peak": 0.36747682094573975,
+            "clipped_fraction": 0.0,
+            "sha256": "f408158f67ff856fb7e8eafd8917c391710da13435fbb0aacf2435a66fd34f5b"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.24,
+              "take_sha256": "b0d8f09a4756aa9441b236e54fc2771b58e5a08f0d3e72d7ce3923266c9d3269",
+              "text": "三号闸门将在十秒后开启。",
+              "speech_text": "三号闸门将在十秒后开启。",
+              "source_take_key": "02afd0c25c46b228e6bba14109e7c4e0f64b11348fa0fbafb3d559b3cde37253"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev04",
+        "split": "development",
+        "group": "space",
+        "text": "收到，我会在这里等你回来。",
+        "language": "Chinese",
+        "speaker": "Serena",
+        "tone": "gentle",
+        "capacity": 4.5
+      },
+      "result": {
+        "scene_id": "dev04",
+        "run_id": "dev04-26925c8991bbbfab",
+        "request_fingerprint": "26925c8991bbbfab8b2715c497c72a0b27ea57bac274ce423256e6f69859fea0",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 4.614359600000171,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "a8a3b34716d25a1067127f60e4eb0ff10ead1fc55239a393dbc3903ebde0c89d",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 67200,
+              "duration": 2.8,
+              "rms_dbfs": -22.920388986255457,
+              "sample_peak": 0.40234375,
+              "oversampled_peak": 0.40732598304748535,
+              "clipped_fraction": 0.0,
+              "sha256": "63a74a66defcb343a270385d05ebb1451571111fad7cc14ffd004e8d2f81d8a9"
+            },
+            "asr": {
+              "text": "收到，我会在这里等你回来。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2885059000000183,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "ed339d8572c90bdf8001b29de9e88741c4d9f41eadd07360c73e449108f8ccee"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "收到我会在这里等你回来",
+              "normalized_hypothesis": "收到我会在这里等你回来"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "收到，我会在这里等你回来。",
+              "language": "Chinese",
+              "speaker": "Serena",
+              "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+              "seed": 4383331
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "63a74a66defcb343a270385d05ebb1451571111fad7cc14ffd004e8d2f81d8a9"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 67200,
+              "duration": 2.8,
+              "rms_dbfs": -22.920388986255457,
+              "sample_peak": 0.40234375,
+              "oversampled_peak": 0.40732598304748535,
+              "clipped_fraction": 0.0,
+              "sha256": "63a74a66defcb343a270385d05ebb1451571111fad7cc14ffd004e8d2f81d8a9"
+            },
+            "final_asr": {
+              "text": "收到，我会在这里等你回来。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2885059000000183,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "ed339d8572c90bdf8001b29de9e88741c4d9f41eadd07360c73e449108f8ccee"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "收到我会在这里等你回来",
+              "normalized_hypothesis": "收到我会在这里等你回来"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\a8a3b34716d25a1067127f60e4eb0ff10ead1fc55239a393dbc3903ebde0c89d\\b1cf7066a75dbbc84abb5c75725eb550cd0a424fb619c5acc574701e899ef77a.wav",
+            "sha256": "63a74a66defcb343a270385d05ebb1451571111fad7cc14ffd004e8d2f81d8a9",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev04",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 108000,
+            "duration": 4.5,
+            "rms_dbfs": -24.980933810586702,
+            "sample_peak": 0.40234375,
+            "oversampled_peak": 0.40732598304748535,
+            "clipped_fraction": 0.0,
+            "sha256": "2b50ceaca2b6ce1985d66d2e4cb55c82b72a1995f822004dc6820f30fba0dc4c"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.8,
+              "take_sha256": "63a74a66defcb343a270385d05ebb1451571111fad7cc14ffd004e8d2f81d8a9",
+              "text": "收到，我会在这里等你回来。",
+              "speech_text": "收到，我会在这里等你回来。",
+              "source_take_key": "a8a3b34716d25a1067127f60e4eb0ff10ead1fc55239a393dbc3903ebde0c89d"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev05",
+        "split": "development",
+        "group": "forest",
+        "text": "Stay close. The path becomes narrow after the bridge.",
+        "language": "English",
+        "speaker": "Ryan",
+        "tone": "neutral",
+        "capacity": 5.0
+      },
+      "result": {
+        "scene_id": "dev05",
+        "run_id": "dev05-f1d9e15e93eedf5f",
+        "request_fingerprint": "f1d9e15e93eedf5fe4ede979a6dd205a0d52783e05c53fde0be93b415863600c",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 6.634211600001436,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "b68497d77de87fd381bea551e3c63c69ccc146c9728b83d5d0fb195c249fd006",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 97920,
+              "duration": 4.08,
+              "rms_dbfs": -21.36408688679338,
+              "sample_peak": 0.62109375,
+              "oversampled_peak": 0.6250035762786865,
+              "clipped_fraction": 0.0,
+              "sha256": "96b3ddd0d8a0428265556ae5671f44afe094235b1573bed8c6ce1118e27cc1ba"
+            },
+            "asr": {
+              "text": "Stay close. The path becomes narrow after the bridge.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.39505389999976614,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a33873264caf10faa30dc8e2a8ee828175e2bae87cd7f76fcfeff3d2d8e8b2d3"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 43,
+              "normalized_reference": "stayclosethepathbecomesnarrowafterthebridge",
+              "normalized_hypothesis": "stayclosethepathbecomesnarrowafterthebridge"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "Stay close. The path becomes narrow after the bridge.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 4383332
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "96b3ddd0d8a0428265556ae5671f44afe094235b1573bed8c6ce1118e27cc1ba"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 97920,
+              "duration": 4.08,
+              "rms_dbfs": -21.36408688679338,
+              "sample_peak": 0.62109375,
+              "oversampled_peak": 0.6250035762786865,
+              "clipped_fraction": 0.0,
+              "sha256": "96b3ddd0d8a0428265556ae5671f44afe094235b1573bed8c6ce1118e27cc1ba"
+            },
+            "final_asr": {
+              "text": "Stay close. The path becomes narrow after the bridge.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.39505389999976614,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a33873264caf10faa30dc8e2a8ee828175e2bae87cd7f76fcfeff3d2d8e8b2d3"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 43,
+              "normalized_reference": "stayclosethepathbecomesnarrowafterthebridge",
+              "normalized_hypothesis": "stayclosethepathbecomesnarrowafterthebridge"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\b68497d77de87fd381bea551e3c63c69ccc146c9728b83d5d0fb195c249fd006\\27856d37590d066ae57d9d3ba9b79ac0da506c60512c65dadbced19188314b7a.wav",
+            "sha256": "96b3ddd0d8a0428265556ae5671f44afe094235b1573bed8c6ce1118e27cc1ba",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev05",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 120000,
+            "duration": 5.0,
+            "rms_dbfs": -22.24718529925477,
+            "sample_peak": 0.62109375,
+            "oversampled_peak": 0.6250035762786865,
+            "clipped_fraction": 0.0,
+            "sha256": "77e8269d9071a033d41a57ac5253db480804dc2049f889582a9f977be5861802"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 4.08,
+              "take_sha256": "96b3ddd0d8a0428265556ae5671f44afe094235b1573bed8c6ce1118e27cc1ba",
+              "text": "Stay close. The path becomes narrow after the bridge.",
+              "speech_text": "Stay close. The path becomes narrow after the bridge.",
+              "source_take_key": "b68497d77de87fd381bea551e3c63c69ccc146c9728b83d5d0fb195c249fd006"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev06",
+        "split": "development",
+        "group": "forest",
+        "text": "Do not touch the red crystal. It is still unstable.",
+        "language": "English",
+        "speaker": "Aiden",
+        "tone": "urgent",
+        "capacity": 4.0
+      },
+      "result": {
+        "scene_id": "dev06",
+        "run_id": "dev06-f8b5cafca6ac324c",
+        "request_fingerprint": "f8b5cafca6ac324c0c07c3b69b12191d05c73ec90ff5b9ccb7299d0dc28545cb",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 2,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 0
+        },
+        "elapsed_seconds": 8.006015099999786,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "9083a3f0cb1861bc9d61d5cb744d50ef71cc0a4d5ee281bf66b05faf35c8cc40",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 101760,
+              "duration": 4.24,
+              "rms_dbfs": -19.236498723498908,
+              "sample_peak": 0.53125,
+              "oversampled_peak": 0.5315881967544556,
+              "clipped_fraction": 0.0,
+              "sha256": "b67a32a234884fc5c61c3ff5c5bf26af995b96cab24e86004ef14cdc3a35ba05"
+            },
+            "asr": {
+              "text": "Do not touch the red crystal. It is still unstable.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.40479119999872637,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "304499c5b15f9d0bd24c424df0a6fbbbf9f5eedef7226da4c19a39a965b24b22"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 40,
+              "normalized_reference": "donottouchtheredcrystalitisstillunstable",
+              "normalized_hypothesis": "donottouchtheredcrystalitisstillunstable"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "Do not touch the red crystal. It is still unstable.",
+              "language": "English",
+              "speaker": "Aiden",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 4383333
+            },
+            "transform": {
+              "speed": 1.062,
+              "method": "ffmpeg_atempo",
+              "source_sha256": "b67a32a234884fc5c61c3ff5c5bf26af995b96cab24e86004ef14cdc3a35ba05"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 95628,
+              "duration": 3.9845,
+              "rms_dbfs": -19.145439649682437,
+              "sample_peak": 0.530731201171875,
+              "oversampled_peak": 0.5310690402984619,
+              "clipped_fraction": 0.0,
+              "sha256": "b3d92940ca0b31d799c3b0e5b7397d52eea90e516e3a0bcec334883e39764652"
+            },
+            "final_asr": {
+              "text": "Do not touch the red crystal. It is still unstable.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.40466709999964223,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "9eafd1e24bbb5354d445506edfe7199f6b9bd99a44e72099e23f9de580658681"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 40,
+              "normalized_reference": "donottouchtheredcrystalitisstillunstable",
+              "normalized_hypothesis": "donottouchtheredcrystalitisstillunstable"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\9083a3f0cb1861bc9d61d5cb744d50ef71cc0a4d5ee281bf66b05faf35c8cc40\\66f27f4f6a7da8037706f1578be5b6c56edc655576ec14d8a7b1e4ed6ca4274a.wav",
+            "sha256": "b3d92940ca0b31d799c3b0e5b7397d52eea90e516e3a0bcec334883e39764652",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev06",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 96000,
+            "duration": 4.0,
+            "rms_dbfs": -19.162301251349355,
+            "sample_peak": 0.530731201171875,
+            "oversampled_peak": 0.5310690402984619,
+            "clipped_fraction": 0.0,
+            "sha256": "992006b2a4fae7fd6579dd4f66c3094bc5fa8946153dadd11edf7e728173c3d8"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.9845,
+              "take_sha256": "b3d92940ca0b31d799c3b0e5b7397d52eea90e516e3a0bcec334883e39764652",
+              "text": "Do not touch the red crystal. It is still unstable.",
+              "speech_text": "Do not touch the red crystal. It is still unstable.",
+              "source_take_key": "9083a3f0cb1861bc9d61d5cb744d50ef71cc0a4d5ee281bf66b05faf35c8cc40"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev07",
+        "split": "development",
+        "group": "forest",
+        "text": "We found the missing map under the old wooden table.",
+        "language": "English",
+        "speaker": "Ryan",
+        "tone": "happy",
+        "capacity": 3.2
+      },
+      "result": {
+        "scene_id": "dev07",
+        "run_id": "dev07-ba88526da2e805dd",
+        "request_fingerprint": "ba88526da2e805dd2aa68bc57f7785a29c8a163b844c1e421b8e139abf842f84",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 2,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 0
+        },
+        "elapsed_seconds": 6.204901000000973,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "a1c2b475ca1b17b6b0a2c659c3a60c1fc15fbc9ca14a3c366a9dc4a2b00980c2",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 80640,
+              "duration": 3.36,
+              "rms_dbfs": -23.13912852508258,
+              "sample_peak": 0.40234375,
+              "oversampled_peak": 0.4111199676990509,
+              "clipped_fraction": 0.0,
+              "sha256": "7e5c9bf83335e6424f28aa2a2d9524c84e42f92cc904d8c5ced6f69fa5188547"
+            },
+            "asr": {
+              "text": "We found the missing map under the old wooden table.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3884972999985621,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "1ebf236bf702c2422a6f5cad26e73c7b688af7486507f8526d2acccb0564896a"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 42,
+              "normalized_reference": "wefoundthemissingmapundertheoldwoodentable",
+              "normalized_hypothesis": "wefoundthemissingmapundertheoldwoodentable"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "We found the missing map under the old wooden table.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+              "seed": 4383334
+            },
+            "transform": {
+              "speed": 1.0519999999999998,
+              "method": "ffmpeg_atempo",
+              "source_sha256": "7e5c9bf83335e6424f28aa2a2d9524c84e42f92cc904d8c5ced6f69fa5188547"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 76032,
+              "duration": 3.168,
+              "rms_dbfs": -23.022763321588418,
+              "sample_peak": 0.402313232421875,
+              "oversampled_peak": 0.41050150990486145,
+              "clipped_fraction": 0.0,
+              "sha256": "71088734189c11bae78692c1561dc631bd91fe51850c70e46a0c20c5355cc8df"
+            },
+            "final_asr": {
+              "text": "We found the missing map under the old wooden table.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.37285139999949024,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a7147b099ec44e7287015c040670be3ff72335cae3cf8e6b829c44b13839f8c4"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 42,
+              "normalized_reference": "wefoundthemissingmapundertheoldwoodentable",
+              "normalized_hypothesis": "wefoundthemissingmapundertheoldwoodentable"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\a1c2b475ca1b17b6b0a2c659c3a60c1fc15fbc9ca14a3c366a9dc4a2b00980c2\\4850db534a47cc48407fa4481ac7244b02f27501de175c5f61f3cd266a2afc96.wav",
+            "sha256": "71088734189c11bae78692c1561dc631bd91fe51850c70e46a0c20c5355cc8df",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev07",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 76800,
+            "duration": 3.2,
+            "rms_dbfs": -23.066411375612923,
+            "sample_peak": 0.402313232421875,
+            "oversampled_peak": 0.41050150990486145,
+            "clipped_fraction": 0.0,
+            "sha256": "5a11315f244867bf9db1eabacefb82e34d9aaa0d2854f0752f1c594efc23992c"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.168,
+              "take_sha256": "71088734189c11bae78692c1561dc631bd91fe51850c70e46a0c20c5355cc8df",
+              "text": "We found the missing map under the old wooden table.",
+              "speech_text": "We found the missing map under the old wooden table.",
+              "source_take_key": "a1c2b475ca1b17b6b0a2c659c3a60c1fc15fbc9ca14a3c366a9dc4a2b00980c2"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "dev08",
+        "split": "development",
+        "group": "forest",
+        "text": "I thought the forest would remember us.",
+        "language": "English",
+        "speaker": "Aiden",
+        "tone": "sad",
+        "capacity": 4.5
+      },
+      "result": {
+        "scene_id": "dev08",
+        "run_id": "dev08-03da31900a613ea0",
+        "request_fingerprint": "03da31900a613ea088b1df31a10e38248cbd13d791848d11668761a13c44dd7c",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 3.9624412000011944,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "3e23c93624bfb53f7a9c4885bedfaeb45928167b0b8d034d89859b72b58f0605",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -23.182039273119386,
+              "sample_peak": 0.298828125,
+              "oversampled_peak": 0.3012149930000305,
+              "clipped_fraction": 0.0,
+              "sha256": "005355938c3f8e19fccffa966448f7ef4b36d77d02d27b7d581f4a31dbf4511c"
+            },
+            "asr": {
+              "text": "I thought the forest would remember us.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2949129000007815,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "158c242d0f98e148fbcb72856ae95d95475074ad590bd2af8e5500f7f54c21c7"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 32,
+              "normalized_reference": "ithoughttheforestwouldrememberus",
+              "normalized_hypothesis": "ithoughttheforestwouldrememberus"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "I thought the forest would remember us.",
+              "language": "English",
+              "speaker": "Aiden",
+              "instruct": "低落而克制的语气，保持清晰。Sound sad but composed and intelligible.",
+              "seed": 4383335
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "005355938c3f8e19fccffa966448f7ef4b36d77d02d27b7d581f4a31dbf4511c"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -23.182039273119386,
+              "sample_peak": 0.298828125,
+              "oversampled_peak": 0.3012149930000305,
+              "clipped_fraction": 0.0,
+              "sha256": "005355938c3f8e19fccffa966448f7ef4b36d77d02d27b7d581f4a31dbf4511c"
+            },
+            "final_asr": {
+              "text": "I thought the forest would remember us.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2949129000007815,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "158c242d0f98e148fbcb72856ae95d95475074ad590bd2af8e5500f7f54c21c7"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 32,
+              "normalized_reference": "ithoughttheforestwouldrememberus",
+              "normalized_hypothesis": "ithoughttheforestwouldrememberus"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\3e23c93624bfb53f7a9c4885bedfaeb45928167b0b8d034d89859b72b58f0605\\2abcf3211cf2226d9fd96aaf116eb5fc2402f48c9ad29ed7948cef7f24fb8f01.wav",
+            "sha256": "005355938c3f8e19fccffa966448f7ef4b36d77d02d27b7d581f4a31dbf4511c",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "dev08",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 108000,
+            "duration": 4.5,
+            "rms_dbfs": -26.059284561963825,
+            "sample_peak": 0.298828125,
+            "oversampled_peak": 0.3012149930000305,
+            "clipped_fraction": 0.0,
+            "sha256": "5d52e51dc9588b46675c905bf23fc8285a1552175d80498bc4409525dc4dc44c"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.32,
+              "take_sha256": "005355938c3f8e19fccffa966448f7ef4b36d77d02d27b7d581f4a31dbf4511c",
+              "text": "I thought the forest would remember us.",
+              "speech_text": "I thought the forest would remember us.",
+              "source_take_key": "3e23c93624bfb53f7a9c4885bedfaeb45928167b0b8d034d89859b72b58f0605"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test01",
+        "split": "holdout",
+        "group": "island",
+        "text": "灯塔已经熄灭，所有船只立刻返航。",
+        "language": "Chinese",
+        "speaker": "Vivian",
+        "tone": "urgent",
+        "capacity": 4.2
+      },
+      "result": {
+        "scene_id": "test01",
+        "run_id": "test01-cc2bf5c32b92d9bc",
+        "request_fingerprint": "cc2bf5c32b92d9bcaa2e2d6a9b2618ad94fa73252ef8d78edc197eda2376bdb7",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 5.113686200002121,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "4e182e17b7351c46275d5f9d77d2b589d613bd7c5d5a4a34396473dbdcfb6849",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 72960,
+              "duration": 3.04,
+              "rms_dbfs": -18.832934135867326,
+              "sample_peak": 0.8359375,
+              "oversampled_peak": 0.8369433879852295,
+              "clipped_fraction": 0.0,
+              "sha256": "21123c0e6ab9563045e0fe34203017042a3fe7a37dbd46f604bf5d840f6fb093"
+            },
+            "asr": {
+              "text": "灯塔已经熄灭，所有船只立刻返航。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3911140999989584,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "8a8b14a41c8f8efcf00d24170376c2884fe7ea5b7e83430832d7057d8135faa6"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 14,
+              "normalized_reference": "灯塔已经熄灭所有船只立刻返航",
+              "normalized_hypothesis": "灯塔已经熄灭所有船只立刻返航"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "灯塔已经熄灭，所有船只立刻返航。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 4383336
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "21123c0e6ab9563045e0fe34203017042a3fe7a37dbd46f604bf5d840f6fb093"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 72960,
+              "duration": 3.04,
+              "rms_dbfs": -18.832934135867326,
+              "sample_peak": 0.8359375,
+              "oversampled_peak": 0.8369433879852295,
+              "clipped_fraction": 0.0,
+              "sha256": "21123c0e6ab9563045e0fe34203017042a3fe7a37dbd46f604bf5d840f6fb093"
+            },
+            "final_asr": {
+              "text": "灯塔已经熄灭，所有船只立刻返航。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3911140999989584,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "8a8b14a41c8f8efcf00d24170376c2884fe7ea5b7e83430832d7057d8135faa6"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 14,
+              "normalized_reference": "灯塔已经熄灭所有船只立刻返航",
+              "normalized_hypothesis": "灯塔已经熄灭所有船只立刻返航"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\4e182e17b7351c46275d5f9d77d2b589d613bd7c5d5a4a34396473dbdcfb6849\\01fc4d6e09726a54e2d9ee951df2294392244eca6b85f15b6048537933bc0228.wav",
+            "sha256": "21123c0e6ab9563045e0fe34203017042a3fe7a37dbd46f604bf5d840f6fb093",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test01",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 100800,
+            "duration": 4.2,
+            "rms_dbfs": -20.236691203758788,
+            "sample_peak": 0.8359375,
+            "oversampled_peak": 0.8369433879852295,
+            "clipped_fraction": 0.0,
+            "sha256": "8c99750ed927f5e9131e61f54f4bde258b41d1e290cf21d07c725bead17aaf98"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.04,
+              "take_sha256": "21123c0e6ab9563045e0fe34203017042a3fe7a37dbd46f604bf5d840f6fb093",
+              "text": "灯塔已经熄灭，所有船只立刻返航。",
+              "speech_text": "灯塔已经熄灭，所有船只立刻返航。",
+              "source_take_key": "4e182e17b7351c46275d5f9d77d2b589d613bd7c5d5a4a34396473dbdcfb6849"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test02",
+        "split": "holdout",
+        "group": "island",
+        "text": "这不是敌人的信号，先别开火。",
+        "language": "Chinese",
+        "speaker": "Uncle_Fu",
+        "tone": "neutral",
+        "capacity": 4.5
+      },
+      "result": {
+        "scene_id": "test02",
+        "run_id": "test02-2dcaf29cac48fa81",
+        "request_fingerprint": "2dcaf29cac48fa81c6453bf51835dbbadcfd2a614d2daf3b53e20b68694dc81c",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 5.698130600001605,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "ee52e8192d63c7a572d8c2de9689a20477c076cd4a29bd98924a1d06f98240ca",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 82560,
+              "duration": 3.44,
+              "rms_dbfs": -21.202362340882495,
+              "sample_peak": 0.62890625,
+              "oversampled_peak": 0.6325098276138306,
+              "clipped_fraction": 0.0,
+              "sha256": "9436e2f46c57c3e529e69f8be370fae0b1b7c52818ecabcdbbe7f9650379b66a"
+            },
+            "asr": {
+              "text": "这不是敌人的信号，先别开火。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3440636999985145,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "bdf4e640106c882d3b81d1037e02b34b86d62cc8a5823a70d2d95a7149cc02eb"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "这不是敌人的信号先别开火",
+              "normalized_hypothesis": "这不是敌人的信号先别开火"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "这不是敌人的信号，先别开火。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 4383337
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "9436e2f46c57c3e529e69f8be370fae0b1b7c52818ecabcdbbe7f9650379b66a"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 82560,
+              "duration": 3.44,
+              "rms_dbfs": -21.202362340882495,
+              "sample_peak": 0.62890625,
+              "oversampled_peak": 0.6325098276138306,
+              "clipped_fraction": 0.0,
+              "sha256": "9436e2f46c57c3e529e69f8be370fae0b1b7c52818ecabcdbbe7f9650379b66a"
+            },
+            "final_asr": {
+              "text": "这不是敌人的信号，先别开火。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3440636999985145,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "bdf4e640106c882d3b81d1037e02b34b86d62cc8a5823a70d2d95a7149cc02eb"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "这不是敌人的信号先别开火",
+              "normalized_hypothesis": "这不是敌人的信号先别开火"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\ee52e8192d63c7a572d8c2de9689a20477c076cd4a29bd98924a1d06f98240ca\\ca9e476e214a2ba9213a304d07c7fbb5baa76b50fb08720580ad5d3db0863ead.wav",
+            "sha256": "9436e2f46c57c3e529e69f8be370fae0b1b7c52818ecabcdbbe7f9650379b66a",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test02",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 108000,
+            "duration": 4.5,
+            "rms_dbfs": -22.36890305292063,
+            "sample_peak": 0.62890625,
+            "oversampled_peak": 0.6325098276138306,
+            "clipped_fraction": 0.0,
+            "sha256": "151839fcb4a04f633c4e80d4a6298aa00aef02a4850ec487b2db6202ba52a7ff"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.44,
+              "take_sha256": "9436e2f46c57c3e529e69f8be370fae0b1b7c52818ecabcdbbe7f9650379b66a",
+              "text": "这不是敌人的信号，先别开火。",
+              "speech_text": "这不是敌人的信号，先别开火。",
+              "source_take_key": "ee52e8192d63c7a572d8c2de9689a20477c076cd4a29bd98924a1d06f98240ca"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test03",
+        "split": "holdout",
+        "group": "island",
+        "text": "北边还有两艘船，我们不能丢下他们。",
+        "language": "Chinese",
+        "speaker": "Dylan",
+        "tone": "angry",
+        "capacity": 3.2
+      },
+      "result": {
+        "scene_id": "test03",
+        "run_id": "test03-04bf0229365dd496",
+        "request_fingerprint": "04bf0229365dd496379549da948ad5370fd374898c9c1f9167d338c182518ba8",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 4.989436699997896,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "7be60ef248f4fdbdea594e97956f9a4f76e625fd803649af1e2f7253749630bd",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 69120,
+              "duration": 2.88,
+              "rms_dbfs": -27.384980068095683,
+              "sample_peak": 0.337890625,
+              "oversampled_peak": 0.34381723403930664,
+              "clipped_fraction": 0.0,
+              "sha256": "1a1e8b8e756c9e08bd3a51cb8d7cfe332e391b1196b08b496cf97a6f41341f6f"
+            },
+            "asr": {
+              "text": "北边还有两艘船，我们不能丢下他们。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.4821162000007462,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "0a1d9e5763120c76385bb129e97d26131f0a3d3de1f9f6b53458691b6a4a6dc8"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 15,
+              "normalized_reference": "北边还有两艘船我们不能丢下他们",
+              "normalized_hypothesis": "北边还有两艘船我们不能丢下他们"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "北边还有两艘船，我们不能丢下他们。",
+              "language": "Chinese",
+              "speaker": "Dylan",
+              "instruct": "生气但克制地说话，不要尖叫。Sound angry but controlled, without shouting.",
+              "seed": 4383338
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "1a1e8b8e756c9e08bd3a51cb8d7cfe332e391b1196b08b496cf97a6f41341f6f"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 69120,
+              "duration": 2.88,
+              "rms_dbfs": -27.384980068095683,
+              "sample_peak": 0.337890625,
+              "oversampled_peak": 0.34381723403930664,
+              "clipped_fraction": 0.0,
+              "sha256": "1a1e8b8e756c9e08bd3a51cb8d7cfe332e391b1196b08b496cf97a6f41341f6f"
+            },
+            "final_asr": {
+              "text": "北边还有两艘船，我们不能丢下他们。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.4821162000007462,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "0a1d9e5763120c76385bb129e97d26131f0a3d3de1f9f6b53458691b6a4a6dc8"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 15,
+              "normalized_reference": "北边还有两艘船我们不能丢下他们",
+              "normalized_hypothesis": "北边还有两艘船我们不能丢下他们"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\7be60ef248f4fdbdea594e97956f9a4f76e625fd803649af1e2f7253749630bd\\6df01b58bb8420b2a32c23a884a5b2a47869d62abb8eded83a2272de05bd325c.wav",
+            "sha256": "1a1e8b8e756c9e08bd3a51cb8d7cfe332e391b1196b08b496cf97a6f41341f6f",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test03",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 76800,
+            "duration": 3.2,
+            "rms_dbfs": -27.842554973702434,
+            "sample_peak": 0.337890625,
+            "oversampled_peak": 0.34381723403930664,
+            "clipped_fraction": 0.0,
+            "sha256": "4b0279508d0330e9178f9d4bc02263749e620a4aa51432b0ca0782e858a4db97"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.88,
+              "take_sha256": "1a1e8b8e756c9e08bd3a51cb8d7cfe332e391b1196b08b496cf97a6f41341f6f",
+              "text": "北边还有两艘船，我们不能丢下他们。",
+              "speech_text": "北边还有两艘船，我们不能丢下他们。",
+              "source_take_key": "7be60ef248f4fdbdea594e97956f9a4f76e625fd803649af1e2f7253749630bd"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test04",
+        "split": "holdout",
+        "group": "island",
+        "text": "风停以后，我们一起去看海。",
+        "language": "Chinese",
+        "speaker": "Serena",
+        "tone": "gentle",
+        "capacity": 5.0
+      },
+      "result": {
+        "scene_id": "test04",
+        "run_id": "test04-f362be1bc4f39006",
+        "request_fingerprint": "f362be1bc4f390065746aaff622e819e6fa9f9c68c4fb61958835ae2af93eac0",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 4.380803100000776,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "6a4b7ed933728067f1a37cd0b7104786dc5752ea7a0b04d694b4d4aec05e3778",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -28.34484230282763,
+              "sample_peak": 0.31640625,
+              "oversampled_peak": 0.31902244687080383,
+              "clipped_fraction": 0.0,
+              "sha256": "3092013ab7890e46d6d2516a5e47156f222421c113b682bce8d1c9e3a99302bb"
+            },
+            "asr": {
+              "text": "风停以后，我们一起去看海。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.29463830000167945,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "6f8afd813eb770191938c893d05aca0b5c7c44bc6aa913313d21e19333a339bd"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "风停以后我们一起去看海",
+              "normalized_hypothesis": "风停以后我们一起去看海"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "风停以后，我们一起去看海。",
+              "language": "Chinese",
+              "speaker": "Serena",
+              "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+              "seed": 4383339
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "3092013ab7890e46d6d2516a5e47156f222421c113b682bce8d1c9e3a99302bb"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -28.34484230282763,
+              "sample_peak": 0.31640625,
+              "oversampled_peak": 0.31902244687080383,
+              "clipped_fraction": 0.0,
+              "sha256": "3092013ab7890e46d6d2516a5e47156f222421c113b682bce8d1c9e3a99302bb"
+            },
+            "final_asr": {
+              "text": "风停以后，我们一起去看海。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.29463830000167945,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "6f8afd813eb770191938c893d05aca0b5c7c44bc6aa913313d21e19333a339bd"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "风停以后我们一起去看海",
+              "normalized_hypothesis": "风停以后我们一起去看海"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\6a4b7ed933728067f1a37cd0b7104786dc5752ea7a0b04d694b4d4aec05e3778\\586904c85181086f524f3272de6d2677894ec03e4fc46d28769d2076696c96ef.wav",
+            "sha256": "3092013ab7890e46d6d2516a5e47156f222421c113b682bce8d1c9e3a99302bb",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test04",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 120000,
+            "duration": 5.0,
+            "rms_dbfs": -31.25214269306932,
+            "sample_peak": 0.31640625,
+            "oversampled_peak": 0.31902244687080383,
+            "clipped_fraction": 0.0,
+            "sha256": "0881db77e4074f3f3185dff6813ce1bc4e83269a6b462535de01ba8415829d66"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.56,
+              "take_sha256": "3092013ab7890e46d6d2516a5e47156f222421c113b682bce8d1c9e3a99302bb",
+              "text": "风停以后，我们一起去看海。",
+              "speech_text": "风停以后，我们一起去看海。",
+              "source_take_key": "6a4b7ed933728067f1a37cd0b7104786dc5752ea7a0b04d694b4d4aec05e3778"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test05",
+        "split": "holdout",
+        "group": "clockwork",
+        "text": "The second bell will ring before the tower door closes.",
+        "language": "English",
+        "speaker": "Ryan",
+        "tone": "neutral",
+        "capacity": 5.0
+      },
+      "result": {
+        "scene_id": "test05",
+        "run_id": "test05-75d9c0164a097833",
+        "request_fingerprint": "75d9c0164a09783353410193c1ec484906dd31c30f0f978de7db4a01121eb673",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 5.647724900001776,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "8a8fc7b28d36d872052adfcee28edc22dfad4408a1c3551d887dc4dbb46b7d62",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 80640,
+              "duration": 3.36,
+              "rms_dbfs": -21.129594397226604,
+              "sample_peak": 0.5234375,
+              "oversampled_peak": 0.5237706899642944,
+              "clipped_fraction": 0.0,
+              "sha256": "1d186feecb4515f0b26fa219192c49902859938ba1cb076092df02f51f27d503"
+            },
+            "asr": {
+              "text": "The second bell will ring before the tower door closes.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.374047099998279,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "412797bcd189e3e22fa584ebe62dc333752cdf73590de2880a76472ae4e29e2b"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 45,
+              "normalized_reference": "thesecondbellwillringbeforethetowerdoorcloses",
+              "normalized_hypothesis": "thesecondbellwillringbeforethetowerdoorcloses"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "The second bell will ring before the tower door closes.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 4383340
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "1d186feecb4515f0b26fa219192c49902859938ba1cb076092df02f51f27d503"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 80640,
+              "duration": 3.36,
+              "rms_dbfs": -21.129594397226604,
+              "sample_peak": 0.5234375,
+              "oversampled_peak": 0.5237706899642944,
+              "clipped_fraction": 0.0,
+              "sha256": "1d186feecb4515f0b26fa219192c49902859938ba1cb076092df02f51f27d503"
+            },
+            "final_asr": {
+              "text": "The second bell will ring before the tower door closes.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.374047099998279,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "412797bcd189e3e22fa584ebe62dc333752cdf73590de2880a76472ae4e29e2b"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 45,
+              "normalized_reference": "thesecondbellwillringbeforethetowerdoorcloses",
+              "normalized_hypothesis": "thesecondbellwillringbeforethetowerdoorcloses"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\8a8fc7b28d36d872052adfcee28edc22dfad4408a1c3551d887dc4dbb46b7d62\\9d0e1702ce5b25d1fd1c59a98edd90eadb31e8eb67ad6c38b351f4f4e1c3c817.wav",
+            "sha256": "1d186feecb4515f0b26fa219192c49902859938ba1cb076092df02f51f27d503",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test05",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 120000,
+            "duration": 5.0,
+            "rms_dbfs": -22.855901666688354,
+            "sample_peak": 0.5234375,
+            "oversampled_peak": 0.5237706899642944,
+            "clipped_fraction": 0.0,
+            "sha256": "fd3cd703c44be850a993856a2ea3af5e6bd57f84eddca356c0e4fda550627028"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.36,
+              "take_sha256": "1d186feecb4515f0b26fa219192c49902859938ba1cb076092df02f51f27d503",
+              "text": "The second bell will ring before the tower door closes.",
+              "speech_text": "The second bell will ring before the tower door closes.",
+              "source_take_key": "8a8fc7b28d36d872052adfcee28edc22dfad4408a1c3551d887dc4dbb46b7d62"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test06",
+        "split": "holdout",
+        "group": "clockwork",
+        "text": "Do not turn the silver key until I give the signal.",
+        "language": "English",
+        "speaker": "Aiden",
+        "tone": "urgent",
+        "capacity": 3.2
+      },
+      "result": {
+        "scene_id": "test06",
+        "run_id": "test06-48d5d68f8f3902de",
+        "request_fingerprint": "48d5d68f8f3902de2dae82e468b64368c5fc2e3ebb9b2ec7fbbb78cb26409db6",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 2,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 0
+        },
+        "elapsed_seconds": 6.29406999999992,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "33bce2b3dc2f26431b9e29221b21a567553bd816180585cf0a49c94bd5bb825a",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 80640,
+              "duration": 3.36,
+              "rms_dbfs": -22.334896804385792,
+              "sample_peak": 0.3984375,
+              "oversampled_peak": 0.3986911475658417,
+              "clipped_fraction": 0.0,
+              "sha256": "8c28d7c781fc679e3f031fb69471f3e39889d85247496c92dff81ce27919c605"
+            },
+            "asr": {
+              "text": "Do not turn the silver key until I give the signal.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.4114253000007011,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "93f3d5d45d55d170f70487f46d3df5efbfa5faedbe72d4247c0c9e9f29490753"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 40,
+              "normalized_reference": "donotturnthesilverkeyuntiligivethesignal",
+              "normalized_hypothesis": "donotturnthesilverkeyuntiligivethesignal"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "Do not turn the silver key until I give the signal.",
+              "language": "English",
+              "speaker": "Aiden",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 4383341
+            },
+            "transform": {
+              "speed": 1.0519999999999998,
+              "method": "ffmpeg_atempo",
+              "source_sha256": "8c28d7c781fc679e3f031fb69471f3e39889d85247496c92dff81ce27919c605"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 76501,
+              "duration": 3.1875416666666667,
+              "rms_dbfs": -22.280922250260815,
+              "sample_peak": 0.397857666015625,
+              "oversampled_peak": 0.39811092615127563,
+              "clipped_fraction": 0.0,
+              "sha256": "f5ffe998d5fb7683cbaa3ceba03cd9af8b66fbf372e5133bc3a974f0fed2bc79"
+            },
+            "final_asr": {
+              "text": "Do not turn the silver key until I give the signal.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.41978390000076615,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "945daa47cbf0f994d72054650ecca87e7f8fbc985312917f690d52d00c9adc10"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 40,
+              "normalized_reference": "donotturnthesilverkeyuntiligivethesignal",
+              "normalized_hypothesis": "donotturnthesilverkeyuntiligivethesignal"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\33bce2b3dc2f26431b9e29221b21a567553bd816180585cf0a49c94bd5bb825a\\c6cb507d24ad2ab7c93b7e08640ad3a955652cd0ceadf91a4c98add1667bfd6c.wav",
+            "sha256": "f5ffe998d5fb7683cbaa3ceba03cd9af8b66fbf372e5133bc3a974f0fed2bc79",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test06",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 76800,
+            "duration": 3.2,
+            "rms_dbfs": -22.297863328890294,
+            "sample_peak": 0.397857666015625,
+            "oversampled_peak": 0.39811092615127563,
+            "clipped_fraction": 0.0,
+            "sha256": "0ffeac80c03fc8081503ec66a83a4e644f4abc7df4e64d815c35444be0350342"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.1875416666666667,
+              "take_sha256": "f5ffe998d5fb7683cbaa3ceba03cd9af8b66fbf372e5133bc3a974f0fed2bc79",
+              "text": "Do not turn the silver key until I give the signal.",
+              "speech_text": "Do not turn the silver key until I give the signal.",
+              "source_take_key": "33bce2b3dc2f26431b9e29221b21a567553bd816180585cf0a49c94bd5bb825a"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test07",
+        "split": "holdout",
+        "group": "clockwork",
+        "text": "At last, the little clock is working again.",
+        "language": "English",
+        "speaker": "Ryan",
+        "tone": "happy",
+        "capacity": 4.5
+      },
+      "result": {
+        "scene_id": "test07",
+        "run_id": "test07-bfb00a5f6b477992",
+        "request_fingerprint": "bfb00a5f6b477992a169978093f45580ceaadb0e2ff6e88d696af9ceb20e785a",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 2,
+          "asr_calls": 2,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 16.994715100001486,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "a19631cf9305631da4d051bd5b7420c96d197542d147b5d65d3e59b8b4044e66",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 180480,
+              "duration": 7.52,
+              "rms_dbfs": -24.955544142417043,
+              "sample_peak": 0.5859375,
+              "oversampled_peak": 0.5864402055740356,
+              "clipped_fraction": 0.0,
+              "sha256": "5a65e98e97e3cf1436560abb7b610c45b4f9228f93a2eea475e875cc0736ed10"
+            },
+            "asr": {
+              "text": "At last, the little clock is working again.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3553795000007085,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "4e6c67184c9124f49cccc68423a5c4328c0fd9cf5d3ffb64f6010776758246d4"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 34,
+              "normalized_reference": "atlastthelittleclockisworkingagain",
+              "normalized_hypothesis": "atlastthelittleclockisworkingagain"
+            },
+            "issues": [
+              "duration_overflow"
+            ],
+            "parameters": {
+              "text": "At last, the little clock is working again.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+              "seed": 4383342
+            },
+            "decision": {
+              "cue_id": "line",
+              "action": "faster",
+              "reason": "duration_overflow"
+            }
+          },
+          {
+            "take_key": "454839ae592c2d075623c145c723339e3c13bfde8a632e0e8b7fdd59e30fa5ed",
+            "cue_id": "line",
+            "attempt": 2,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 72960,
+              "duration": 3.04,
+              "rms_dbfs": -21.368965615335718,
+              "sample_peak": 0.55078125,
+              "oversampled_peak": 0.5546911358833313,
+              "clipped_fraction": 0.0,
+              "sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f"
+            },
+            "asr": {
+              "text": "At last, the little clock is working again.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.34535909999976866,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "051e0a157ed51f1986f9fad591af45fbade9299c5320cac192d43fef62dd4158"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 34,
+              "normalized_reference": "atlastthelittleclockisworkingagain",
+              "normalized_hypothesis": "atlastthelittleclockisworkingagain"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "At last, the little clock is working again.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone. 语速快一些，保持吐字清楚。Speak faster while remaining clear.",
+              "seed": 4384351
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 72960,
+              "duration": 3.04,
+              "rms_dbfs": -21.368965615335718,
+              "sample_peak": 0.55078125,
+              "oversampled_peak": 0.5546911358833313,
+              "clipped_fraction": 0.0,
+              "sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f"
+            },
+            "final_asr": {
+              "text": "At last, the little clock is working again.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.34535909999976866,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "051e0a157ed51f1986f9fad591af45fbade9299c5320cac192d43fef62dd4158"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 34,
+              "normalized_reference": "atlastthelittleclockisworkingagain",
+              "normalized_hypothesis": "atlastthelittleclockisworkingagain"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\454839ae592c2d075623c145c723339e3c13bfde8a632e0e8b7fdd59e30fa5ed\\200046da8e08902c3df304d2d72e89e8c9ec0429927c5aa6aff0d9ca877f9d51.wav",
+            "sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test07",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 108000,
+            "duration": 4.5,
+            "rms_dbfs": -23.07235491700162,
+            "sample_peak": 0.55078125,
+            "oversampled_peak": 0.5546911358833313,
+            "clipped_fraction": 0.0,
+            "sha256": "3a4210dbafd4e7d6bcc0dc80b7a613f357033fe6e785dd326598112e23a4f2da"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 3.04,
+              "take_sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f",
+              "text": "At last, the little clock is working again.",
+              "speech_text": "At last, the little clock is working again.",
+              "source_take_key": "454839ae592c2d075623c145c723339e3c13bfde8a632e0e8b7fdd59e30fa5ed"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "case": {
+        "id": "test08",
+        "split": "holdout",
+        "group": "clockwork",
+        "text": "We promised to keep this place safe.",
+        "language": "English",
+        "speaker": "Aiden",
+        "tone": "sad",
+        "capacity": 4.0
+      },
+      "result": {
+        "scene_id": "test08",
+        "run_id": "test08-b7835f3b82e4c978",
+        "request_fingerprint": "b7835f3b82e4c97835a7d13cd4567fdc52af42a8f28eab7191cbff30060bc31f",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "line"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 1
+        },
+        "elapsed_seconds": 3.650577799999155,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "be557bfc465ac9cfffc473e34d551959b16e28f65c99b9e3a66a4fd50c9a68af",
+            "cue_id": "line",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 49920,
+              "duration": 2.08,
+              "rms_dbfs": -22.678869128889193,
+              "sample_peak": 0.384765625,
+              "oversampled_peak": 0.38584327697753906,
+              "clipped_fraction": 0.0,
+              "sha256": "0c75fa77390d25aa162cd5e6934c91196470b8409b35ad5cf88af88ebc62028a"
+            },
+            "asr": {
+              "text": "We promise to keep this place safe.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.29091669999979786,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a129603ea422644dde9816eac5c09283514a88594a8b3bc5a2ecc049a8ce061c"
+            },
+            "content": {
+              "cer": 0.034482758620689655,
+              "edit_distance": 1,
+              "reference_length": 29,
+              "normalized_reference": "wepromisedtokeepthisplacesafe",
+              "normalized_hypothesis": "wepromisetokeepthisplacesafe"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "We promised to keep this place safe.",
+              "language": "English",
+              "speaker": "Aiden",
+              "instruct": "低落而克制的语气，保持清晰。Sound sad but composed and intelligible.",
+              "seed": 4383343
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "0c75fa77390d25aa162cd5e6934c91196470b8409b35ad5cf88af88ebc62028a"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 49920,
+              "duration": 2.08,
+              "rms_dbfs": -22.678869128889193,
+              "sample_peak": 0.384765625,
+              "oversampled_peak": 0.38584327697753906,
+              "clipped_fraction": 0.0,
+              "sha256": "0c75fa77390d25aa162cd5e6934c91196470b8409b35ad5cf88af88ebc62028a"
+            },
+            "final_asr": {
+              "text": "We promise to keep this place safe.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.29091669999979786,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "a129603ea422644dde9816eac5c09283514a88594a8b3bc5a2ecc049a8ce061c"
+            },
+            "final_content": {
+              "cer": 0.034482758620689655,
+              "edit_distance": 1,
+              "reference_length": 29,
+              "normalized_reference": "wepromisedtokeepthisplacesafe",
+              "normalized_hypothesis": "wepromisetokeepthisplacesafe"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\be557bfc465ac9cfffc473e34d551959b16e28f65c99b9e3a66a4fd50c9a68af\\3f763c166fd2641ce608f7cda7025a3ed25b4423fdea73ca87d588bb87256b5c.wav",
+            "sha256": "0c75fa77390d25aa162cd5e6934c91196470b8409b35ad5cf88af88ebc62028a",
+            "decision": {
+              "cue_id": "line",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "test08",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 96000,
+            "duration": 4.0,
+            "rms_dbfs": -25.5188356925412,
+            "sample_peak": 0.384765625,
+            "oversampled_peak": 0.38584327697753906,
+            "clipped_fraction": 0.0,
+            "sha256": "8ad84230c78a78d21cd7ba2f68cf8b7dcd2709914e6c261eec691975e000b067"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "line",
+              "character": "actor",
+              "start": 0.0,
+              "end": 2.08,
+              "take_sha256": "0c75fa77390d25aa162cd5e6934c91196470b8409b35ad5cf88af88ebc62028a",
+              "text": "We promised to keep this place safe.",
+              "speech_text": "We promised to keep this place safe.",
+              "source_take_key": "be557bfc465ac9cfffc473e34d551959b16e28f65c99b9e3a66a4fd50c9a68af"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    }
+  ],
+  "showcases": [
+    {
+      "scene": {
+        "version": 1,
+        "id": "spaceport",
+        "title": "星港撤离 · 双角色对白",
+        "cast": [
+          {
+            "id": "pilot",
+            "name": "领航员",
+            "speaker": "Vivian"
+          },
+          {
+            "id": "commander",
+            "name": "指挥官",
+            "speaker": "Uncle_Fu"
+          }
+        ],
+        "cues": [
+          {
+            "id": "s01",
+            "character": "pilot",
+            "text": "指挥官，飞船已经准备好了。",
+            "speech_text": null,
+            "language": "Chinese",
+            "start": 0.0,
+            "end": 4.5,
+            "tone": "urgent"
+          },
+          {
+            "id": "s02",
+            "character": "commander",
+            "text": "先确认所有人都已登船。",
+            "speech_text": null,
+            "language": "Chinese",
+            "start": 4.8,
+            "end": 9.3,
+            "tone": "neutral"
+          },
+          {
+            "id": "s03",
+            "character": "pilot",
+            "text": "最后一名乘客已经进入舱门。",
+            "speech_text": null,
+            "language": "Chinese",
+            "start": 9.6,
+            "end": 14.6,
+            "tone": "happy"
+          },
+          {
+            "id": "s04",
+            "character": "commander",
+            "text": "很好，准备出发。",
+            "speech_text": null,
+            "language": "Chinese",
+            "start": 14.9,
+            "end": 18.9,
+            "tone": "gentle"
+          }
+        ],
+        "policy": {
+          "max_attempts": 2,
+          "max_cer": 0.15,
+          "max_speedup": 1.15,
+          "max_clipped_fraction": 0.001,
+          "min_rms_dbfs": -48.0
+        },
+        "seed": 2026
+      },
+      "result": {
+        "scene_id": "spaceport",
+        "run_id": "spaceport-ae0d9eeccdd40041",
+        "request_fingerprint": "ae0d9eeccdd40041fcfb6da0baf08df1c47699f0250e91ebf8f7c7a128d4c7f3",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "s01",
+          "s02",
+          "s03",
+          "s04"
+        ],
+        "stats": {
+          "tts_calls": 4,
+          "asr_calls": 4,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 4
+        },
+        "elapsed_seconds": 17.39517580000029,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "29c39728132c3a2c9c0c41c72584f4cb20bc822168e9c80103dc981a5e4da0dd",
+            "cue_id": "s01",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -22.013142450234437,
+              "sample_peak": 0.52734375,
+              "oversampled_peak": 0.5334624648094177,
+              "clipped_fraction": 0.0,
+              "sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653"
+            },
+            "asr": {
+              "text": "指挥官，飞船已经准备好了。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2942484000013792,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "655cb481db29c3934abc29cbba05c7f7fd193d035c04ecd022fa39c27dcae9a2"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官飞船已经准备好了",
+              "normalized_hypothesis": "指挥官飞船已经准备好了"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "指挥官，飞船已经准备好了。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 3187900
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -22.013142450234437,
+              "sample_peak": 0.52734375,
+              "oversampled_peak": 0.5334624648094177,
+              "clipped_fraction": 0.0,
+              "sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653"
+            },
+            "final_asr": {
+              "text": "指挥官，飞船已经准备好了。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2942484000013792,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "655cb481db29c3934abc29cbba05c7f7fd193d035c04ecd022fa39c27dcae9a2"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官飞船已经准备好了",
+              "normalized_hypothesis": "指挥官飞船已经准备好了"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\29c39728132c3a2c9c0c41c72584f4cb20bc822168e9c80103dc981a5e4da0dd\\74bac1eb7829a379408980e8fa010d14eaa4209ec5d84d404066844293b1de80.wav",
+            "sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653",
+            "decision": {
+              "cue_id": "s01",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3",
+            "cue_id": "s02",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 65280,
+              "duration": 2.72,
+              "rms_dbfs": -19.535989200466375,
+              "sample_peak": 0.68359375,
+              "oversampled_peak": 0.7154137492179871,
+              "clipped_fraction": 0.0,
+              "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "asr": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2672157999986666,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "09fce132028dc5d2ce66c6a4cf6752ae62020c15439a29a745268ae118b00ec9"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 10,
+              "normalized_reference": "先确认所有人都已登船",
+              "normalized_hypothesis": "先确认所有人都已登船"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 16770399
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 65280,
+              "duration": 2.72,
+              "rms_dbfs": -19.535989200466375,
+              "sample_peak": 0.68359375,
+              "oversampled_peak": 0.7154137492179871,
+              "clipped_fraction": 0.0,
+              "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "final_asr": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2672157999986666,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "09fce132028dc5d2ce66c6a4cf6752ae62020c15439a29a745268ae118b00ec9"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 10,
+              "normalized_reference": "先确认所有人都已登船",
+              "normalized_hypothesis": "先确认所有人都已登船"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3\\1e533812f0e6baaa41832831c718dcb6dea2c99b8d560d628f269f2f872b2915.wav",
+            "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e",
+            "decision": {
+              "cue_id": "s02",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f",
+            "cue_id": "s03",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 57600,
+              "duration": 2.4,
+              "rms_dbfs": -18.265688557064983,
+              "sample_peak": 0.63671875,
+              "oversampled_peak": 0.6371240615844727,
+              "clipped_fraction": 0.0,
+              "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "asr": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3221597000010661,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "4c6b13e4e1d8d975743e6884d336cbe67260609cace3526ece93f08282749a07"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "最后一名乘客已经进入舱门",
+              "normalized_hypothesis": "最后一名乘客已经进入舱门"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+              "seed": 15466139
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 57600,
+              "duration": 2.4,
+              "rms_dbfs": -18.265688557064983,
+              "sample_peak": 0.63671875,
+              "oversampled_peak": 0.6371240615844727,
+              "clipped_fraction": 0.0,
+              "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "final_asr": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3221597000010661,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "4c6b13e4e1d8d975743e6884d336cbe67260609cace3526ece93f08282749a07"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "最后一名乘客已经进入舱门",
+              "normalized_hypothesis": "最后一名乘客已经进入舱门"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f\\cdacc504a68d3c6a33969f7ba041d7370dc03dc51892bd2fcd93d4ad9937623b.wav",
+            "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec",
+            "decision": {
+              "cue_id": "s03",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92",
+            "cue_id": "s04",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 48000,
+              "duration": 2.0,
+              "rms_dbfs": -22.806688773628586,
+              "sample_peak": 0.625,
+              "oversampled_peak": 0.6393834352493286,
+              "clipped_fraction": 0.0,
+              "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "asr": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.22641769999972894,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "27469645b2e3f9a9fd214632b81859cb94c9bb2a6e8c505b2343ae8e57f9595c"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 6,
+              "normalized_reference": "很好准备出发",
+              "normalized_hypothesis": "很好准备出发"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+              "seed": 10719307
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 48000,
+              "duration": 2.0,
+              "rms_dbfs": -22.806688773628586,
+              "sample_peak": 0.625,
+              "oversampled_peak": 0.6393834352493286,
+              "clipped_fraction": 0.0,
+              "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "final_asr": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.22641769999972894,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "27469645b2e3f9a9fd214632b81859cb94c9bb2a6e8c505b2343ae8e57f9595c"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 6,
+              "normalized_reference": "很好准备出发",
+              "normalized_hypothesis": "很好准备出发"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92\\b1ca867e5173e3f2e6deb9e482876f233b77f6ecf3465616fd099d15fcd6917c.wav",
+            "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3",
+            "decision": {
+              "cue_id": "s04",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "spaceport",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 453600,
+            "duration": 18.9,
+            "rms_dbfs": -23.09705878113647,
+            "sample_peak": 0.68359375,
+            "oversampled_peak": 0.7154137492179871,
+            "clipped_fraction": 0.0,
+            "sha256": "c7d7ce0c7835bc3236948bdd15478883c97c34925fcb3e9cdc1e2a94506fc389"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "s01",
+              "character": "pilot",
+              "start": 0.0,
+              "end": 2.56,
+              "take_sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653",
+              "text": "指挥官，飞船已经准备好了。",
+              "speech_text": "指挥官，飞船已经准备好了。",
+              "source_take_key": "29c39728132c3a2c9c0c41c72584f4cb20bc822168e9c80103dc981a5e4da0dd"
+            },
+            {
+              "cue_id": "s02",
+              "character": "commander",
+              "start": 4.8,
+              "end": 7.52,
+              "take_sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e",
+              "text": "先确认所有人都已登船。",
+              "speech_text": "先确认所有人都已登船。",
+              "source_take_key": "825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3"
+            },
+            {
+              "cue_id": "s03",
+              "character": "pilot",
+              "start": 9.6,
+              "end": 12.0,
+              "take_sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec",
+              "text": "最后一名乘客已经进入舱门。",
+              "speech_text": "最后一名乘客已经进入舱门。",
+              "source_take_key": "24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f"
+            },
+            {
+              "cue_id": "s04",
+              "character": "commander",
+              "start": 14.9,
+              "end": 16.9,
+              "take_sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3",
+              "text": "很好，准备出发。",
+              "speech_text": "很好，准备出发。",
+              "source_take_key": "d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      },
+      "replay_stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 4,
+        "asr_cache_hits": 8
+      },
+      "one_line_edit": {
+        "scene_id": "spaceport",
+        "run_id": "spaceport-abe6dc61fd3eb4b3",
+        "request_fingerprint": "abe6dc61fd3eb4b3588a5ada73e0c20e9493da7dd6f69dc67eb2d53248cad15a",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "s01",
+          "s02",
+          "s03",
+          "s04"
+        ],
+        "stats": {
+          "tts_calls": 1,
+          "asr_calls": 1,
+          "tts_cache_hits": 3,
+          "asr_cache_hits": 7
+        },
+        "elapsed_seconds": 5.102732900002593,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "b3182e10c194b46f17a6749f07ebeb7a620c58368d698484752a491f344049a2",
+            "cue_id": "s01",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -19.50181746424372,
+              "sample_peak": 0.796875,
+              "oversampled_peak": 0.810852587223053,
+              "clipped_fraction": 0.0,
+              "sha256": "998ac4a643b650c355f204a7c0703ac1c2f45b7dfaac693ee4858f2628d2ab61"
+            },
+            "asr": {
+              "text": "指挥官，所有乘客已经登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.35227880000093137,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "9ad00ddef7641959d2a2d23f53c87f8a159d059768b741b20f6bd9bd3a104575"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官所有乘客已经登船",
+              "normalized_hypothesis": "指挥官所有乘客已经登船"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "指挥官，所有乘客已经登船。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 3187900
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "998ac4a643b650c355f204a7c0703ac1c2f45b7dfaac693ee4858f2628d2ab61"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -19.50181746424372,
+              "sample_peak": 0.796875,
+              "oversampled_peak": 0.810852587223053,
+              "clipped_fraction": 0.0,
+              "sha256": "998ac4a643b650c355f204a7c0703ac1c2f45b7dfaac693ee4858f2628d2ab61"
+            },
+            "final_asr": {
+              "text": "指挥官，所有乘客已经登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.35227880000093137,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "9ad00ddef7641959d2a2d23f53c87f8a159d059768b741b20f6bd9bd3a104575"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 11,
+              "normalized_reference": "指挥官所有乘客已经登船",
+              "normalized_hypothesis": "指挥官所有乘客已经登船"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\b3182e10c194b46f17a6749f07ebeb7a620c58368d698484752a491f344049a2\\305f5d8bb289f50f3a5e0f7efa97ae2e9fe42672b87b048456e459f4fec89335.wav",
+            "sha256": "998ac4a643b650c355f204a7c0703ac1c2f45b7dfaac693ee4858f2628d2ab61",
+            "decision": {
+              "cue_id": "s01",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3",
+            "cue_id": "s02",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 65280,
+              "duration": 2.72,
+              "rms_dbfs": -19.535989200466375,
+              "sample_peak": 0.68359375,
+              "oversampled_peak": 0.7154137492179871,
+              "clipped_fraction": 0.0,
+              "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "asr": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2672157999986666,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "09fce132028dc5d2ce66c6a4cf6752ae62020c15439a29a745268ae118b00ec9"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 10,
+              "normalized_reference": "先确认所有人都已登船",
+              "normalized_hypothesis": "先确认所有人都已登船"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 16770399
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 65280,
+              "duration": 2.72,
+              "rms_dbfs": -19.535989200466375,
+              "sample_peak": 0.68359375,
+              "oversampled_peak": 0.7154137492179871,
+              "clipped_fraction": 0.0,
+              "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e"
+            },
+            "final_asr": {
+              "text": "先确认所有人都已登船。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.2672157999986666,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "09fce132028dc5d2ce66c6a4cf6752ae62020c15439a29a745268ae118b00ec9"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 10,
+              "normalized_reference": "先确认所有人都已登船",
+              "normalized_hypothesis": "先确认所有人都已登船"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3\\1e533812f0e6baaa41832831c718dcb6dea2c99b8d560d628f269f2f872b2915.wav",
+            "sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e",
+            "decision": {
+              "cue_id": "s02",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f",
+            "cue_id": "s03",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 57600,
+              "duration": 2.4,
+              "rms_dbfs": -18.265688557064983,
+              "sample_peak": 0.63671875,
+              "oversampled_peak": 0.6371240615844727,
+              "clipped_fraction": 0.0,
+              "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "asr": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3221597000010661,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "4c6b13e4e1d8d975743e6884d336cbe67260609cace3526ece93f08282749a07"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "最后一名乘客已经进入舱门",
+              "normalized_hypothesis": "最后一名乘客已经进入舱门"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "speaker": "Vivian",
+              "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+              "seed": 15466139
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 57600,
+              "duration": 2.4,
+              "rms_dbfs": -18.265688557064983,
+              "sample_peak": 0.63671875,
+              "oversampled_peak": 0.6371240615844727,
+              "clipped_fraction": 0.0,
+              "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec"
+            },
+            "final_asr": {
+              "text": "最后一名乘客已经进入舱门。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3221597000010661,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "4c6b13e4e1d8d975743e6884d336cbe67260609cace3526ece93f08282749a07"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 12,
+              "normalized_reference": "最后一名乘客已经进入舱门",
+              "normalized_hypothesis": "最后一名乘客已经进入舱门"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f\\cdacc504a68d3c6a33969f7ba041d7370dc03dc51892bd2fcd93d4ad9937623b.wav",
+            "sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec",
+            "decision": {
+              "cue_id": "s03",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92",
+            "cue_id": "s04",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 48000,
+              "duration": 2.0,
+              "rms_dbfs": -22.806688773628586,
+              "sample_peak": 0.625,
+              "oversampled_peak": 0.6393834352493286,
+              "clipped_fraction": 0.0,
+              "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "asr": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.22641769999972894,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "27469645b2e3f9a9fd214632b81859cb94c9bb2a6e8c505b2343ae8e57f9595c"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 6,
+              "normalized_reference": "很好准备出发",
+              "normalized_hypothesis": "很好准备出发"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "speaker": "Uncle_Fu",
+              "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+              "seed": 10719307
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 48000,
+              "duration": 2.0,
+              "rms_dbfs": -22.806688773628586,
+              "sample_peak": 0.625,
+              "oversampled_peak": 0.6393834352493286,
+              "clipped_fraction": 0.0,
+              "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3"
+            },
+            "final_asr": {
+              "text": "很好，准备出发。",
+              "language": "Chinese",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.22641769999972894,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "27469645b2e3f9a9fd214632b81859cb94c9bb2a6e8c505b2343ae8e57f9595c"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 6,
+              "normalized_reference": "很好准备出发",
+              "normalized_hypothesis": "很好准备出发"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92\\b1ca867e5173e3f2e6deb9e482876f233b77f6ecf3465616fd099d15fcd6917c.wav",
+            "sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3",
+            "decision": {
+              "cue_id": "s04",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "spaceport",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 453600,
+            "duration": 18.9,
+            "rms_dbfs": -22.655382342676425,
+            "sample_peak": 0.796875,
+            "oversampled_peak": 0.810852587223053,
+            "clipped_fraction": 0.0,
+            "sha256": "a70fe783e6e1210da6b8ecd6a6a709581128c568a80277cb8c040dc7c844922e"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "s01",
+              "character": "pilot",
+              "start": 0.0,
+              "end": 2.32,
+              "take_sha256": "998ac4a643b650c355f204a7c0703ac1c2f45b7dfaac693ee4858f2628d2ab61",
+              "text": "指挥官，所有乘客已经登船。",
+              "speech_text": "指挥官，所有乘客已经登船。",
+              "source_take_key": "b3182e10c194b46f17a6749f07ebeb7a620c58368d698484752a491f344049a2"
+            },
+            {
+              "cue_id": "s02",
+              "character": "commander",
+              "start": 4.8,
+              "end": 7.52,
+              "take_sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e",
+              "text": "先确认所有人都已登船。",
+              "speech_text": "先确认所有人都已登船。",
+              "source_take_key": "825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3"
+            },
+            {
+              "cue_id": "s03",
+              "character": "pilot",
+              "start": 9.6,
+              "end": 12.0,
+              "take_sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec",
+              "text": "最后一名乘客已经进入舱门。",
+              "speech_text": "最后一名乘客已经进入舱门。",
+              "source_take_key": "24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f"
+            },
+            {
+              "cue_id": "s04",
+              "character": "commander",
+              "start": 14.9,
+              "end": 16.9,
+              "take_sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3",
+              "text": "很好，准备出发。",
+              "speech_text": "很好，准备出发。",
+              "source_take_key": "d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      }
+    },
+    {
+      "scene": {
+        "version": 1,
+        "id": "clockwork",
+        "title": "Clockwork Gate · English dialogue",
+        "cast": [
+          {
+            "id": "scout",
+            "name": "Scout",
+            "speaker": "Ryan"
+          },
+          {
+            "id": "keeper",
+            "name": "Keeper",
+            "speaker": "Aiden"
+          }
+        ],
+        "cues": [
+          {
+            "id": "c01",
+            "character": "scout",
+            "text": "The gate is opening. We need to move now.",
+            "speech_text": null,
+            "language": "English",
+            "start": 0.0,
+            "end": 4.5,
+            "tone": "urgent"
+          },
+          {
+            "id": "c02",
+            "character": "keeper",
+            "text": "Wait. The blue light means the bridge is not safe.",
+            "speech_text": null,
+            "language": "English",
+            "start": 4.8,
+            "end": 10.8,
+            "tone": "neutral"
+          },
+          {
+            "id": "c03",
+            "character": "scout",
+            "text": "Then we will take the path through the forest.",
+            "speech_text": null,
+            "language": "English",
+            "start": 11.1,
+            "end": 16.6,
+            "tone": "gentle"
+          }
+        ],
+        "policy": {
+          "max_attempts": 2,
+          "max_cer": 0.15,
+          "max_speedup": 1.15,
+          "max_clipped_fraction": 0.001,
+          "min_rms_dbfs": -48.0
+        },
+        "seed": 2031
+      },
+      "result": {
+        "scene_id": "clockwork",
+        "run_id": "clockwork-29983bda49e460a8",
+        "request_fingerprint": "29983bda49e460a8352e12ea480afc1153964a394762565f21d0652b3fea2dfd",
+        "backend": "qwen3-local",
+        "backend_identity": {
+          "backend": "qwen3-local",
+          "models": {
+            "tts": {
+              "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+              "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+              "source": "modelscope"
+            },
+            "asr": {
+              "repo": "Qwen/Qwen3-ASR-0.6B",
+              "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+              "source": "modelscope"
+            }
+          },
+          "tts_package": "0.1.1",
+          "asr_package": "0.0.6",
+          "sampling": {
+            "temperature": 0.8,
+            "top_p": 0.95,
+            "max_new_tokens": 1200
+          }
+        },
+        "status": "complete",
+        "rejected_cues": [],
+        "accepted_cues": [
+          "c01",
+          "c02",
+          "c03"
+        ],
+        "stats": {
+          "tts_calls": 3,
+          "asr_calls": 3,
+          "tts_cache_hits": 0,
+          "asr_cache_hits": 3
+        },
+        "elapsed_seconds": 15.134753500002262,
+        "subjective_quality": "style, acting and naturalness require human listening",
+        "takes": [
+          {
+            "take_key": "8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93",
+            "cue_id": "c01",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -22.028044617710883,
+              "sample_peak": 0.49609375,
+              "oversampled_peak": 0.5000116229057312,
+              "clipped_fraction": 0.0,
+              "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+            },
+            "asr": {
+              "text": "The gate is opening. We need to move now.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3731952000016463,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "2b892a0a582b6656e6e13f46e77b363f3af5074b31e3523af6dc5763c9d364f1"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 31,
+              "normalized_reference": "thegateisopeningweneedtomovenow",
+              "normalized_hypothesis": "thegateisopeningweneedtomovenow"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "The gate is opening. We need to move now.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+              "seed": 7133088
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 61440,
+              "duration": 2.56,
+              "rms_dbfs": -22.028044617710883,
+              "sample_peak": 0.49609375,
+              "oversampled_peak": 0.5000116229057312,
+              "clipped_fraction": 0.0,
+              "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+            },
+            "final_asr": {
+              "text": "The gate is opening. We need to move now.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.3731952000016463,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "2b892a0a582b6656e6e13f46e77b363f3af5074b31e3523af6dc5763c9d364f1"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 31,
+              "normalized_reference": "thegateisopeningweneedtomovenow",
+              "normalized_hypothesis": "thegateisopeningweneedtomovenow"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93\\55beb2881a33ce351eabf6f96ebdaf984d983d210750ca06ebc2f2ffa09363b1.wav",
+            "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb",
+            "decision": {
+              "cue_id": "c01",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d",
+            "cue_id": "c02",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 82560,
+              "duration": 3.44,
+              "rms_dbfs": -18.774721112854866,
+              "sample_peak": 0.76171875,
+              "oversampled_peak": 0.7654090523719788,
+              "clipped_fraction": 0.0,
+              "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+            },
+            "asr": {
+              "text": "Wait. The blue light means the bridge is not safe.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.40218839999943157,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "779d916d5a7f4bceea0f96acedd0e50f08ce9d9e25dd24dfc63d6c5b3f7b4279"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 39,
+              "normalized_reference": "waitthebluelightmeansthebridgeisnotsafe",
+              "normalized_hypothesis": "waitthebluelightmeansthebridgeisnotsafe"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "Wait. The blue light means the bridge is not safe.",
+              "language": "English",
+              "speaker": "Aiden",
+              "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+              "seed": 10937649
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 82560,
+              "duration": 3.44,
+              "rms_dbfs": -18.774721112854866,
+              "sample_peak": 0.76171875,
+              "oversampled_peak": 0.7654090523719788,
+              "clipped_fraction": 0.0,
+              "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+            },
+            "final_asr": {
+              "text": "Wait. The blue light means the bridge is not safe.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.40218839999943157,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "779d916d5a7f4bceea0f96acedd0e50f08ce9d9e25dd24dfc63d6c5b3f7b4279"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 39,
+              "normalized_reference": "waitthebluelightmeansthebridgeisnotsafe",
+              "normalized_hypothesis": "waitthebluelightmeansthebridgeisnotsafe"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d\\578edaf884f4caa9fe561e43f4c60ecb14763b87b1eb5d74493ede2bf24043fe.wav",
+            "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e",
+            "decision": {
+              "cue_id": "c02",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          },
+          {
+            "take_key": "c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00",
+            "cue_id": "c03",
+            "attempt": 1,
+            "raw_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -22.040865863708916,
+              "sample_peak": 0.47265625,
+              "oversampled_peak": 0.4739304780960083,
+              "clipped_fraction": 0.0,
+              "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+            },
+            "asr": {
+              "text": "Then we will take the path through the forest.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.34681930000078864,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "52b840de4441dd460ed318f0b126b659a58a6c1ac70fc4549b3dce0473bd068f"
+            },
+            "content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 37,
+              "normalized_reference": "thenwewilltakethepaththroughtheforest",
+              "normalized_hypothesis": "thenwewilltakethepaththroughtheforest"
+            },
+            "issues": [],
+            "parameters": {
+              "text": "Then we will take the path through the forest.",
+              "language": "English",
+              "speaker": "Ryan",
+              "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+              "seed": 8413324
+            },
+            "transform": {
+              "speed": 1.0,
+              "method": "unaltered",
+              "source_sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+            },
+            "final_signal": {
+              "sample_rate": 24000,
+              "samples": 55680,
+              "duration": 2.32,
+              "rms_dbfs": -22.040865863708916,
+              "sample_peak": 0.47265625,
+              "oversampled_peak": 0.4739304780960083,
+              "clipped_fraction": 0.0,
+              "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+            },
+            "final_asr": {
+              "text": "Then we will take the path through the forest.",
+              "language": "English",
+              "reference_supplied": false,
+              "elapsed_seconds": 0.34681930000078864,
+              "gpu_allocated_bytes": 1580769792,
+              "request_fingerprint": "52b840de4441dd460ed318f0b126b659a58a6c1ac70fc4549b3dce0473bd068f"
+            },
+            "final_content": {
+              "cer": 0.0,
+              "edit_distance": 0,
+              "reference_length": 37,
+              "normalized_reference": "thenwewilltakethepaththroughtheforest",
+              "normalized_hypothesis": "thenwewilltakethepaththroughtheforest"
+            },
+            "path": "${PROJECT_ROOT}\\data\\cache\\tts\\c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00\\a6e815cc5cfc206e9b20e773a1e181884871284f0cd7121515a2f80c770caf7e.wav",
+            "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa",
+            "decision": {
+              "cue_id": "c03",
+              "action": "accept",
+              "reason": "objective constraints passed"
+            }
+          }
+        ],
+        "export": {
+          "scene_id": "clockwork",
+          "audio": {
+            "sample_rate": 24000,
+            "samples": 398400,
+            "duration": 16.6,
+            "rms_dbfs": -23.383673989814184,
+            "sample_peak": 0.76171875,
+            "oversampled_peak": 0.7654090523719788,
+            "clipped_fraction": 0.0,
+            "sha256": "d6ed49723e4793aaf5c63a97fd3d51685e86448e5328000a66a2b3fa820b2b1f"
+          },
+          "gain": 1.0,
+          "cues": [
+            {
+              "cue_id": "c01",
+              "character": "scout",
+              "start": 0.0,
+              "end": 2.56,
+              "take_sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb",
+              "text": "The gate is opening. We need to move now.",
+              "speech_text": "The gate is opening. We need to move now.",
+              "source_take_key": "8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93"
+            },
+            {
+              "cue_id": "c02",
+              "character": "keeper",
+              "start": 4.8,
+              "end": 8.24,
+              "take_sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e",
+              "text": "Wait. The blue light means the bridge is not safe.",
+              "speech_text": "Wait. The blue light means the bridge is not safe.",
+              "source_take_key": "a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d"
+            },
+            {
+              "cue_id": "c03",
+              "character": "scout",
+              "start": 11.1,
+              "end": 13.42,
+              "take_sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa",
+              "text": "Then we will take the path through the forest.",
+              "speech_text": "Then we will take the path through the forest.",
+              "source_take_key": "c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00"
+            }
+          ],
+          "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+        }
+      },
+      "replay_stats": {
+        "tts_calls": 0,
+        "asr_calls": 0,
+        "tts_cache_hits": 3,
+        "asr_cache_hits": 6
+      },
+      "one_line_edit": null
+    }
+  ],
+  "interpretation": "ASR-based content and deterministic timing/acoustic checks only. No human MOS, emotion accuracy, speaker similarity, fine-tuning or production traffic claims."
+}

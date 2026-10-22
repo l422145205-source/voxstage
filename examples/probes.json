@@ -1,0 +1,22 @@
+{
+  "description":"Original dialogue probes frozen before production experiments. No human listening labels.",
+  "policy":{"max_attempts":2,"max_cer":0.15,"max_speedup":1.15,"max_clipped_fraction":0.001,"min_rms_dbfs":-48},
+  "cases":[
+    {"id":"dev01","split":"development","group":"space","text":"指挥官，请关闭左侧的舱门。","language":"Chinese","speaker":"Vivian","tone":"urgent","capacity":4.0},
+    {"id":"dev02","split":"development","group":"space","text":"不要启动引擎，燃料管还没有接好。","language":"Chinese","speaker":"Uncle_Fu","tone":"neutral","capacity":5.0},
+    {"id":"dev03","split":"development","group":"space","text":"三号闸门将在十秒后开启。","language":"Chinese","speaker":"Dylan","tone":"happy","capacity":2.5},
+    {"id":"dev04","split":"development","group":"space","text":"收到，我会在这里等你回来。","language":"Chinese","speaker":"Serena","tone":"gentle","capacity":4.5},
+    {"id":"dev05","split":"development","group":"forest","text":"Stay close. The path becomes narrow after the bridge.","language":"English","speaker":"Ryan","tone":"neutral","capacity":5.0},
+    {"id":"dev06","split":"development","group":"forest","text":"Do not touch the red crystal. It is still unstable.","language":"English","speaker":"Aiden","tone":"urgent","capacity":4.0},
+    {"id":"dev07","split":"development","group":"forest","text":"We found the missing map under the old wooden table.","language":"English","speaker":"Ryan","tone":"happy","capacity":3.2},
+    {"id":"dev08","split":"development","group":"forest","text":"I thought the forest would remember us.","language":"English","speaker":"Aiden","tone":"sad","capacity":4.5},
+    {"id":"test01","split":"holdout","group":"island","text":"灯塔已经熄灭，所有船只立刻返航。","language":"Chinese","speaker":"Vivian","tone":"urgent","capacity":4.2},
+    {"id":"test02","split":"holdout","group":"island","text":"这不是敌人的信号，先别开火。","language":"Chinese","speaker":"Uncle_Fu","tone":"neutral","capacity":4.5},
+    {"id":"test03","split":"holdout","group":"island","text":"北边还有两艘船，我们不能丢下他们。","language":"Chinese","speaker":"Dylan","tone":"angry","capacity":3.2},
+    {"id":"test04","split":"holdout","group":"island","text":"风停以后，我们一起去看海。","language":"Chinese","speaker":"Serena","tone":"gentle","capacity":5.0},
+    {"id":"test05","split":"holdout","group":"clockwork","text":"The second bell will ring before the tower door closes.","language":"English","speaker":"Ryan","tone":"neutral","capacity":5.0},
+    {"id":"test06","split":"holdout","group":"clockwork","text":"Do not turn the silver key until I give the signal.","language":"English","speaker":"Aiden","tone":"urgent","capacity":3.2},
+    {"id":"test07","split":"holdout","group":"clockwork","text":"At last, the little clock is working again.","language":"English","speaker":"Ryan","tone":"happy","capacity":4.5},
+    {"id":"test08","split":"holdout","group":"clockwork","text":"We promised to keep this place safe.","language":"English","speaker":"Aiden","tone":"sad","capacity":4.0}
+  ]
+}

@@ -64,9 +64,8 @@ runtime/venvs/asr/bin/python -m pip install -r requirements-asr.txt
 worker 自动优先使用这些环境；如未建立，则使用控制器的 Python 和项目内 `runtime/deps/tts`、`asr`、`common` 导入目录。本机实测使用后一种隔离导入方式，并非声称所有全新环境都已测试。
 
 ```bash
-# 官方 ModelScope 镜像在本机可达；也支持 Hugging Face 端点。
-# Linux/macOS: export VOXSTAGE_MODEL_ENDPOINT=https://modelscope.cn
-# PowerShell: $env:VOXSTAGE_MODEL_ENDPOINT='https://modelscope.cn'
+# 默认使用已实测的官方 ModelScope 源，与 models.lock.json 的 revision 对应。
+# 不同模型平台的 revision 不可混用；切换源需另行核验并更新锁文件。
 python scripts/bootstrap.py model tts
 python scripts/bootstrap.py model asr
 voxstage serve --models

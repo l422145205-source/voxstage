@@ -1,0 +1,57 @@
+{
+  "scene_id": "spaceport",
+  "audio": {
+    "sample_rate": 24000,
+    "samples": 453600,
+    "duration": 18.9,
+    "rms_dbfs": -23.09705878113647,
+    "sample_peak": 0.68359375,
+    "oversampled_peak": 0.7154137492179871,
+    "clipped_fraction": 0.0,
+    "sha256": "c7d7ce0c7835bc3236948bdd15478883c97c34925fcb3e9cdc1e2a94506fc389"
+  },
+  "gain": 1.0,
+  "cues": [
+    {
+      "cue_id": "s01",
+      "character": "pilot",
+      "start": 0.0,
+      "end": 2.56,
+      "take_sha256": "ab1a90641bd1236eab2d33acc065bf44c61bd5b276c2edaf482f2feda7718653",
+      "text": "指挥官，飞船已经准备好了。",
+      "speech_text": "指挥官，飞船已经准备好了。",
+      "source_take_key": "29c39728132c3a2c9c0c41c72584f4cb20bc822168e9c80103dc981a5e4da0dd"
+    },
+    {
+      "cue_id": "s02",
+      "character": "commander",
+      "start": 4.8,
+      "end": 7.52,
+      "take_sha256": "05c4202728200bc27f304a5fc24ba06e168f2bd8ead512ad53fe24f02d79238e",
+      "text": "先确认所有人都已登船。",
+      "speech_text": "先确认所有人都已登船。",
+      "source_take_key": "825ca8e5097534b741cd6037340676a96d2b3ac827cb1d222946bea12accd3d3"
+    },
+    {
+      "cue_id": "s03",
+      "character": "pilot",
+      "start": 9.6,
+      "end": 12.0,
+      "take_sha256": "0892d93fcee4c3c7806b554b6591b7bf63b3ffd42129a4031a8469ff38e899ec",
+      "text": "最后一名乘客已经进入舱门。",
+      "speech_text": "最后一名乘客已经进入舱门。",
+      "source_take_key": "24a3ebb37338e2f12aab6fa2bff264eabd03dea270102d96fda8056c14c5e37f"
+    },
+    {
+      "cue_id": "s04",
+      "character": "commander",
+      "start": 14.9,
+      "end": 16.9,
+      "take_sha256": "2c8414cb1b9d7a5f062f04c5186ad81368b533345ddbf3a1d4c61ac08c76c2f3",
+      "text": "很好，准备出发。",
+      "speech_text": "很好，准备出发。",
+      "source_take_key": "d576da998f0530ee91e24230a63469c003e415ebc4b79b3e5f2e70ded6d2fe92"
+    }
+  ],
+  "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+}

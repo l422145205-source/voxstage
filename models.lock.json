@@ -1,0 +1,12 @@
+{
+  "tts": {
+    "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+    "source": "modelscope"
+  },
+  "asr": {
+    "repo": "Qwen/Qwen3-ASR-0.6B",
+    "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+    "source": "modelscope"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "scene_id": "deadline",
+  "run_id": "deadline-57b3a25262e6e329",
+  "request_fingerprint": "57b3a25262e6e329f3c27253d084ee2145e39999c845e104b9ca9522e92913d1",
+  "backend": "qwen3-local",
+  "backend_identity": {
+    "backend": "qwen3-local",
+    "models": {
+      "tts": {
+        "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+        "source": "modelscope"
+      },
+      "asr": {
+        "repo": "Qwen/Qwen3-ASR-0.6B",
+        "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+        "source": "modelscope"
+      }
+    },
+    "tts_package": "0.1.1",
+    "asr_package": "0.0.6",
+    "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 1200
+    }
+  },
+  "status": "needs_review",
+  "rejected_cues": [
+    "line"
+  ],
+  "accepted_cues": [],
+  "stats": {
+    "tts_calls": 0,
+    "asr_calls": 0,
+    "tts_cache_hits": 2,
+    "asr_cache_hits": 2
+  },
+  "elapsed_seconds": 0.022085900000092806,
+  "subjective_quality": "style, acting and naturalness require human listening",
+  "takes": [
+    {
+      "take_key": "a19631cf9305631da4d051bd5b7420c96d197542d147b5d65d3e59b8b4044e66",
+      "cue_id": "line",
+      "attempt": 1,
+      "raw_signal": {
+        "sample_rate": 24000,
+        "samples": 180480,
+        "duration": 7.52,
+        "rms_dbfs": -24.955544142417043,
+        "sample_peak": 0.5859375,
+        "oversampled_peak": 0.5864402055740356,
+        "clipped_fraction": 0.0,
+        "sha256": "5a65e98e97e3cf1436560abb7b610c45b4f9228f93a2eea475e875cc0736ed10"
+      },
+      "asr": {
+        "text": "At last, the little clock is working again.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.3553795000007085,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "4e6c67184c9124f49cccc68423a5c4328c0fd9cf5d3ffb64f6010776758246d4"
+      },
+      "content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 34,
+        "normalized_reference": "atlastthelittleclockisworkingagain",
+        "normalized_hypothesis": "atlastthelittleclockisworkingagain",
+        "missing_protected_terms": []
+      },
+      "issues": [
+        "duration_overflow"
+      ],
+      "parameters": {
+        "text": "At last, the little clock is working again.",
+        "language": "English",
+        "speaker": "Ryan",
+        "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone.",
+        "seed": 4383342
+      },
+      "decision": {
+        "cue_id": "line",
+        "action": "faster",
+        "reason": "duration_overflow"
+      }
+    },
+    {
+      "take_key": "454839ae592c2d075623c145c723339e3c13bfde8a632e0e8b7fdd59e30fa5ed",
+      "cue_id": "line",
+      "attempt": 2,
+      "raw_signal": {
+        "sample_rate": 24000,
+        "samples": 72960,
+        "duration": 3.04,
+        "rms_dbfs": -21.368965615335718,
+        "sample_peak": 0.55078125,
+        "oversampled_peak": 0.5546911358833313,
+        "clipped_fraction": 0.0,
+        "sha256": "94c477b328ba60d7b22d6612281439602284e67f2c45f6673e6c73eff8b17f0f"
+      },
+      "asr": {
+        "text": "At last, the little clock is working again.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.34535909999976866,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "051e0a157ed51f1986f9fad591af45fbade9299c5320cac192d43fef62dd4158"
+      },
+      "content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 34,
+        "normalized_reference": "atlastthelittleclockisworkingagain",
+        "normalized_hypothesis": "atlastthelittleclockisworkingagain",
+        "missing_protected_terms": []
+      },
+      "issues": [
+        "duration_overflow"
+      ],
+      "parameters": {
+        "text": "At last, the little clock is working again.",
+        "language": "English",
+        "speaker": "Ryan",
+        "instruct": "开心、明亮的语气。Speak with a cheerful, bright tone. 语速快一些，保持吐字清楚。Speak faster while remaining clear.",
+        "seed": 4384351
+      },
+      "decision": {
+        "cue_id": "line",
+        "action": "reject",
+        "reason": "duration_overflow"
+      }
+    }
+  ]
+}

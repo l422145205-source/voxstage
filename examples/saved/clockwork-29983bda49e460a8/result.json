@@ -1,0 +1,317 @@
+{
+  "scene_id": "clockwork",
+  "run_id": "clockwork-29983bda49e460a8",
+  "request_fingerprint": "29983bda49e460a8352e12ea480afc1153964a394762565f21d0652b3fea2dfd",
+  "backend": "qwen3-local",
+  "backend_identity": {
+    "backend": "qwen3-local",
+    "models": {
+      "tts": {
+        "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+        "revision": "ae999bce1d1356e93686274865bc72744daab1a5",
+        "source": "modelscope"
+      },
+      "asr": {
+        "repo": "Qwen/Qwen3-ASR-0.6B",
+        "revision": "3b885f72b1733a6a50dc17a597fb4135c3d656a0",
+        "source": "modelscope"
+      }
+    },
+    "tts_package": "0.1.1",
+    "asr_package": "0.0.6",
+    "sampling": {
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 1200
+    }
+  },
+  "status": "complete",
+  "rejected_cues": [],
+  "accepted_cues": [
+    "c01",
+    "c02",
+    "c03"
+  ],
+  "stats": {
+    "tts_calls": 3,
+    "asr_calls": 3,
+    "tts_cache_hits": 0,
+    "asr_cache_hits": 3
+  },
+  "elapsed_seconds": 15.134753500002262,
+  "subjective_quality": "style, acting and naturalness require human listening",
+  "takes": [
+    {
+      "take_key": "8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93",
+      "cue_id": "c01",
+      "attempt": 1,
+      "raw_signal": {
+        "sample_rate": 24000,
+        "samples": 61440,
+        "duration": 2.56,
+        "rms_dbfs": -22.028044617710883,
+        "sample_peak": 0.49609375,
+        "oversampled_peak": 0.5000116229057312,
+        "clipped_fraction": 0.0,
+        "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+      },
+      "asr": {
+        "text": "The gate is opening. We need to move now.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.3731952000016463,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "2b892a0a582b6656e6e13f46e77b363f3af5074b31e3523af6dc5763c9d364f1"
+      },
+      "content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 31,
+        "normalized_reference": "thegateisopeningweneedtomovenow",
+        "normalized_hypothesis": "thegateisopeningweneedtomovenow"
+      },
+      "issues": [],
+      "parameters": {
+        "text": "The gate is opening. We need to move now.",
+        "language": "English",
+        "speaker": "Ryan",
+        "instruct": "语气急迫、紧张，保持清晰。Speak urgently with clear articulation.",
+        "seed": 7133088
+      },
+      "transform": {
+        "speed": 1.0,
+        "method": "unaltered",
+        "source_sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+      },
+      "final_signal": {
+        "sample_rate": 24000,
+        "samples": 61440,
+        "duration": 2.56,
+        "rms_dbfs": -22.028044617710883,
+        "sample_peak": 0.49609375,
+        "oversampled_peak": 0.5000116229057312,
+        "clipped_fraction": 0.0,
+        "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb"
+      },
+      "final_asr": {
+        "text": "The gate is opening. We need to move now.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.3731952000016463,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "2b892a0a582b6656e6e13f46e77b363f3af5074b31e3523af6dc5763c9d364f1"
+      },
+      "final_content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 31,
+        "normalized_reference": "thegateisopeningweneedtomovenow",
+        "normalized_hypothesis": "thegateisopeningweneedtomovenow"
+      },
+      "path": "${PROJECT_ROOT}\\data\\cache\\tts\\8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93\\55beb2881a33ce351eabf6f96ebdaf984d983d210750ca06ebc2f2ffa09363b1.wav",
+      "sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb",
+      "decision": {
+        "cue_id": "c01",
+        "action": "accept",
+        "reason": "objective constraints passed"
+      }
+    },
+    {
+      "take_key": "a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d",
+      "cue_id": "c02",
+      "attempt": 1,
+      "raw_signal": {
+        "sample_rate": 24000,
+        "samples": 82560,
+        "duration": 3.44,
+        "rms_dbfs": -18.774721112854866,
+        "sample_peak": 0.76171875,
+        "oversampled_peak": 0.7654090523719788,
+        "clipped_fraction": 0.0,
+        "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+      },
+      "asr": {
+        "text": "Wait. The blue light means the bridge is not safe.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.40218839999943157,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "779d916d5a7f4bceea0f96acedd0e50f08ce9d9e25dd24dfc63d6c5b3f7b4279"
+      },
+      "content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 39,
+        "normalized_reference": "waitthebluelightmeansthebridgeisnotsafe",
+        "normalized_hypothesis": "waitthebluelightmeansthebridgeisnotsafe"
+      },
+      "issues": [],
+      "parameters": {
+        "text": "Wait. The blue light means the bridge is not safe.",
+        "language": "English",
+        "speaker": "Aiden",
+        "instruct": "清楚、自然地说话，不增加任何台词。Speak clearly and naturally.",
+        "seed": 10937649
+      },
+      "transform": {
+        "speed": 1.0,
+        "method": "unaltered",
+        "source_sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+      },
+      "final_signal": {
+        "sample_rate": 24000,
+        "samples": 82560,
+        "duration": 3.44,
+        "rms_dbfs": -18.774721112854866,
+        "sample_peak": 0.76171875,
+        "oversampled_peak": 0.7654090523719788,
+        "clipped_fraction": 0.0,
+        "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e"
+      },
+      "final_asr": {
+        "text": "Wait. The blue light means the bridge is not safe.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.40218839999943157,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "779d916d5a7f4bceea0f96acedd0e50f08ce9d9e25dd24dfc63d6c5b3f7b4279"
+      },
+      "final_content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 39,
+        "normalized_reference": "waitthebluelightmeansthebridgeisnotsafe",
+        "normalized_hypothesis": "waitthebluelightmeansthebridgeisnotsafe"
+      },
+      "path": "${PROJECT_ROOT}\\data\\cache\\tts\\a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d\\578edaf884f4caa9fe561e43f4c60ecb14763b87b1eb5d74493ede2bf24043fe.wav",
+      "sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e",
+      "decision": {
+        "cue_id": "c02",
+        "action": "accept",
+        "reason": "objective constraints passed"
+      }
+    },
+    {
+      "take_key": "c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00",
+      "cue_id": "c03",
+      "attempt": 1,
+      "raw_signal": {
+        "sample_rate": 24000,
+        "samples": 55680,
+        "duration": 2.32,
+        "rms_dbfs": -22.040865863708916,
+        "sample_peak": 0.47265625,
+        "oversampled_peak": 0.4739304780960083,
+        "clipped_fraction": 0.0,
+        "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+      },
+      "asr": {
+        "text": "Then we will take the path through the forest.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.34681930000078864,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "52b840de4441dd460ed318f0b126b659a58a6c1ac70fc4549b3dce0473bd068f"
+      },
+      "content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 37,
+        "normalized_reference": "thenwewilltakethepaththroughtheforest",
+        "normalized_hypothesis": "thenwewilltakethepaththroughtheforest"
+      },
+      "issues": [],
+      "parameters": {
+        "text": "Then we will take the path through the forest.",
+        "language": "English",
+        "speaker": "Ryan",
+        "instruct": "温和、安慰的语气，保持清晰。Speak gently and reassuringly.",
+        "seed": 8413324
+      },
+      "transform": {
+        "speed": 1.0,
+        "method": "unaltered",
+        "source_sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+      },
+      "final_signal": {
+        "sample_rate": 24000,
+        "samples": 55680,
+        "duration": 2.32,
+        "rms_dbfs": -22.040865863708916,
+        "sample_peak": 0.47265625,
+        "oversampled_peak": 0.4739304780960083,
+        "clipped_fraction": 0.0,
+        "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa"
+      },
+      "final_asr": {
+        "text": "Then we will take the path through the forest.",
+        "language": "English",
+        "reference_supplied": false,
+        "elapsed_seconds": 0.34681930000078864,
+        "gpu_allocated_bytes": 1580769792,
+        "request_fingerprint": "52b840de4441dd460ed318f0b126b659a58a6c1ac70fc4549b3dce0473bd068f"
+      },
+      "final_content": {
+        "cer": 0.0,
+        "edit_distance": 0,
+        "reference_length": 37,
+        "normalized_reference": "thenwewilltakethepaththroughtheforest",
+        "normalized_hypothesis": "thenwewilltakethepaththroughtheforest"
+      },
+      "path": "${PROJECT_ROOT}\\data\\cache\\tts\\c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00\\a6e815cc5cfc206e9b20e773a1e181884871284f0cd7121515a2f80c770caf7e.wav",
+      "sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa",
+      "decision": {
+        "cue_id": "c03",
+        "action": "accept",
+        "reason": "objective constraints passed"
+      }
+    }
+  ],
+  "export": {
+    "scene_id": "clockwork",
+    "audio": {
+      "sample_rate": 24000,
+      "samples": 398400,
+      "duration": 16.6,
+      "rms_dbfs": -23.383673989814184,
+      "sample_peak": 0.76171875,
+      "oversampled_peak": 0.7654090523719788,
+      "clipped_fraction": 0.0,
+      "sha256": "d6ed49723e4793aaf5c63a97fd3d51685e86448e5328000a66a2b3fa820b2b1f"
+    },
+    "gain": 1.0,
+    "cues": [
+      {
+        "cue_id": "c01",
+        "character": "scout",
+        "start": 0.0,
+        "end": 2.56,
+        "take_sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb",
+        "text": "The gate is opening. We need to move now.",
+        "speech_text": "The gate is opening. We need to move now.",
+        "source_take_key": "8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93"
+      },
+      {
+        "cue_id": "c02",
+        "character": "keeper",
+        "start": 4.8,
+        "end": 8.24,
+        "take_sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e",
+        "text": "Wait. The blue light means the bridge is not safe.",
+        "speech_text": "Wait. The blue light means the bridge is not safe.",
+        "source_take_key": "a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d"
+      },
+      {
+        "cue_id": "c03",
+        "character": "scout",
+        "start": 11.1,
+        "end": 13.42,
+        "take_sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa",
+        "text": "Then we will take the path through the forest.",
+        "speech_text": "Then we will take the path through the forest.",
+        "source_take_key": "c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00"
+      }
+    ],
+    "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+  }
+}

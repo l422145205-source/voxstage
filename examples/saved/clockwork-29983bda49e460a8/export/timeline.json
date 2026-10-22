@@ -1,0 +1,47 @@
+{
+  "scene_id": "clockwork",
+  "audio": {
+    "sample_rate": 24000,
+    "samples": 398400,
+    "duration": 16.6,
+    "rms_dbfs": -23.383673989814184,
+    "sample_peak": 0.76171875,
+    "oversampled_peak": 0.7654090523719788,
+    "clipped_fraction": 0.0,
+    "sha256": "d6ed49723e4793aaf5c63a97fd3d51685e86448e5328000a66a2b3fa820b2b1f"
+  },
+  "gain": 1.0,
+  "cues": [
+    {
+      "cue_id": "c01",
+      "character": "scout",
+      "start": 0.0,
+      "end": 2.56,
+      "take_sha256": "6d69b98eba0fb807cc6fa0eb0bf4f91b3cb1e6c276c2a348be7c8550a082faeb",
+      "text": "The gate is opening. We need to move now.",
+      "speech_text": "The gate is opening. We need to move now.",
+      "source_take_key": "8d64cca69daa777c855388d6d144ee7b52a079c1e7b3e7fecbb203c3bb548d93"
+    },
+    {
+      "cue_id": "c02",
+      "character": "keeper",
+      "start": 4.8,
+      "end": 8.24,
+      "take_sha256": "2cbb01a46393aae443de89c1eb230c76fcdddf0f70c167a09dbbf5199c38be7e",
+      "text": "Wait. The blue light means the bridge is not safe.",
+      "speech_text": "Wait. The blue light means the bridge is not safe.",
+      "source_take_key": "a264195455fdbba6b6def9679aa3dd1fed96d9b16bce4146de88d4d98613950d"
+    },
+    {
+      "cue_id": "c03",
+      "character": "scout",
+      "start": 11.1,
+      "end": 13.42,
+      "take_sha256": "0e5861e122cada7df38abf1b5ea3747411f69a0cfca2a2853932a785b46062fa",
+      "text": "Then we will take the path through the forest.",
+      "speech_text": "Then we will take the path through the forest.",
+      "source_take_key": "c091606de932073745b25dad9d40aae13eb05c1b75c616e284585215f7927a00"
+    }
+  ],
+  "subtitle_timing": "cue-level from placed audio, not word/phoneme alignment"
+}
